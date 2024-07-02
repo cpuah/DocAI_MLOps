@@ -18,7 +18,7 @@ param
     [Parameter(Mandatory = $true)]
     [string]$DeploymentName,
     [Parameter(Mandatory = $true)]
-    [string]$Location,
+    [string]$Location, 
     [Parameter(Mandatory = $true)]
     [string]$SkipInfrastructure
 )
@@ -40,17 +40,24 @@ function Set-ConfigurationFileVariable($configurationFile, $variableName, $varia
 
 Write-Host "Starting environment setup..."
 
-if ($SkipInfrastructure -eq '$false' || -not (Test-Path -Path './infra/InfrastructureOutputs.json')) {
-    Write-Host "Deploying infrastructure..."
-    $InfrastructureOutputs = (./infra/Deploy-Infrastructure.ps1 `
-            -DeploymentName $DeploymentName `
-            -Location $Location `
-            -ErrorAction Stop)
-}
-else {
-    Write-Host "Skipping infrastructure deployment. Using existing outputs..."
-    $InfrastructureOutputs = Get-Content -Path './infra/InfrastructureOutputs.json' -Raw | ConvertFrom-Json
-}
+
+Write-Host "Deploying infrastructure..."
+$InfrastructureOutputs = (./infra/Deploy-Infrastructure.ps1 `
+        -DeploymentName $DeploymentName `
+        -Location $Location `
+        -ErrorAction Stop)
+
+#if ($SkipInfrastructure -eq '$false' || -not (Test-Path -Path './infra/InfrastructureOutputs.json')) {
+#    Write-Host "Deploying infrastructure..."
+#    $InfrastructureOutputs = (./infra/Deploy-Infrastructure.ps1 `
+#            -DeploymentName $DeploymentName `
+#            -Location $Location `
+#            -ErrorAction Stop)
+#}
+#else {
+#    Write-Host "Skipping infrastructure deployment. Using existing outputs..."
+#    $InfrastructureOutputs = Get-Content -Path './infra/InfrastructureOutputs.json' -Raw | ConvertFrom-Json
+#}
 
 $ResourceGroupName = $InfrastructureOutputs.resourceGroupInfo.value.name
 $ManagedIdentityClientId = $InfrastructureOutputs.managedIdentityInfo.value.clientId

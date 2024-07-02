@@ -10,7 +10,7 @@ param workloadName string
 param location string
 
 @description('Name of the resource group. If empty, a unique name will be generated.')
-param resourceGroupName string = 'docintel-rg'
+param resourceGroupName string = ''
 
 @description('Tags for all resources.')
 param tags object = {}
