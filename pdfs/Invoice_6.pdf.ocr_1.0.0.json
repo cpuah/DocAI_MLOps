@@ -1,7 +1,7 @@
 {
     "status": "succeeded",
-    "createdDateTime": "2024-04-27T16:38:43Z",
-    "lastUpdatedDateTime": "2024-04-27T16:38:43Z",
+    "createdDateTime": "2024-07-03T04:40:40Z",
+    "lastUpdatedDateTime": "2024-07-03T04:40:40Z",
     "analyzeResult": {
         "apiVersion": "2023-07-31",
         "modelId": "invoices-1.0.0",
@@ -2786,34 +2786,34 @@
                                 "length": 4
                             }
                         ],
-                        "confidence": 0.96
+                        "confidence": 0.946
                     },
-                    "Issued Date": {
+                    "Customer Address": {
                         "valueType": "string",
-                        "value": "2/27/2024",
-                        "content": "2/27/2024",
+                        "value": "Kingdom Street London W2 6BD United Kingdom",
+                        "content": "Kingdom Street London W2 6BD United Kingdom",
                         "boundingRegions": [
                             {
                                 "pageNumber": 1,
                                 "polygon": [
-                                    6.74,
-                                    3.21,
-                                    7.41,
-                                    3.21,
-                                    7.41,
-                                    3.36,
-                                    6.74,
-                                    3.36
+                                    6.43,
+                                    2.205,
+                                    7.425,
+                                    2.205,
+                                    7.425,
+                                    2.865,
+                                    6.43,
+                                    2.865
                                 ]
                             }
                         ],
                         "spans": [
                             {
-                                "offset": 175,
-                                "length": 9
+                                "offset": 123,
+                                "length": 43
                             }
                         ],
-                        "confidence": 0.994
+                        "confidence": 0.912
                     },
                     "Customer Signature Date": {
                         "valueType": "string",
@@ -2848,7 +2848,56 @@
                                 "length": 5
                             }
                         ],
-                        "confidence": 0.752
+                        "confidence": 0.701
+                    },
+                    "Paid Stamp": {
+                        "valueType": "signature",
+                        "value": "unsigned",
+                        "content": null,
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1.735,
+                                    1.59,
+                                    6.18,
+                                    1.59,
+                                    6.18,
+                                    4.55,
+                                    1.735,
+                                    4.55
+                                ]
+                            }
+                        ],
+                        "spans": [],
+                        "confidence": 0.995
+                    },
+                    "Issued Date": {
+                        "valueType": "string",
+                        "value": "2/27/2024",
+                        "content": "2/27/2024",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    6.74,
+                                    3.21,
+                                    7.41,
+                                    3.21,
+                                    7.41,
+                                    3.36,
+                                    6.74,
+                                    3.36
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 175,
+                                "length": 9
+                            }
+                        ],
+                        "confidence": 0.993
                     },
                     "Distributor Signature": {
                         "valueType": "signature",
@@ -2919,34 +2968,7 @@
                                 "length": 9
                             }
                         ],
-                        "confidence": 0.995
-                    },
-                    "Customer Address": {
-                        "valueType": "string",
-                        "value": "Kingdom Street London W2 6BD United Kingdom",
-                        "content": "Kingdom Street London W2 6BD United Kingdom",
-                        "boundingRegions": [
-                            {
-                                "pageNumber": 1,
-                                "polygon": [
-                                    6.43,
-                                    2.205,
-                                    7.425,
-                                    2.205,
-                                    7.425,
-                                    2.865,
-                                    6.43,
-                                    2.865
-                                ]
-                            }
-                        ],
-                        "spans": [
-                            {
-                                "offset": 123,
-                                "length": 43
-                            }
-                        ],
-                        "confidence": 0.939
+                        "confidence": 0.994
                     },
                     "Customer Name": {
                         "valueType": "string",
@@ -2973,29 +2995,7 @@
                                 "length": 9
                             }
                         ],
-                        "confidence": 0.992
-                    },
-                    "Paid Stamp": {
-                        "valueType": "signature",
-                        "value": "unsigned",
-                        "content": null,
-                        "boundingRegions": [
-                            {
-                                "pageNumber": 1,
-                                "polygon": [
-                                    1.735,
-                                    1.59,
-                                    6.18,
-                                    1.59,
-                                    6.18,
-                                    4.55,
-                                    1.735,
-                                    4.55
-                                ]
-                            }
-                        ],
-                        "spans": [],
-                        "confidence": 0.995
+                        "confidence": 0.991
                     },
                     "Items": {
                         "valueType": "list",

@@ -15,7 +15,11 @@ class DocumentCanvas:
         """
 
         self.canvases: list[BBoxWidget] = []
-        self.images_dir = os.path.join(working_dir, 'images')
+        #self.images_dir = os.path.join(working_dir, 'images')
+        self.images_dir =  'images'
+
+
+
         if not os.path.exists(self.images_dir):
             os.makedirs(self.images_dir)
 
@@ -45,7 +49,10 @@ class DocumentCanvas:
             page_ref = i + 1
             image_path_ref = os.path.join(
                 self.images_dir, f'{pdf_file_name}.page_{page_ref}.jpg')
+            #image_path_ref = 'Invoice_6.pdf.page_1.jpg'
             page.save(image_path_ref, 'JPEG')
+
+            
 
             canvas = BBoxWidget(
                 image=image_path_ref,

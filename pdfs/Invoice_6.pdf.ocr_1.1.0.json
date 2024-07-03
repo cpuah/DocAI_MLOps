@@ -1,7 +1,7 @@
 {
     "status": "succeeded",
-    "createdDateTime": "2024-07-02T06:55:56Z",
-    "lastUpdatedDateTime": "2024-07-02T06:55:56Z",
+    "createdDateTime": "2024-07-03T04:42:06Z",
+    "lastUpdatedDateTime": "2024-07-03T04:42:06Z",
     "analyzeResult": {
         "apiVersion": "2023-07-31",
         "modelId": "invoices-1.1.0",
@@ -2761,59 +2761,27 @@
                     }
                 ],
                 "fields": {
-                    "Total Quantity": {
-                        "valueType": "string",
-                        "value": "10.5",
-                        "content": "10.5",
+                    "Customer Signature": {
+                        "valueType": "signature",
+                        "value": "unsigned",
+                        "content": null,
                         "boundingRegions": [
                             {
                                 "pageNumber": 1,
                                 "polygon": [
-                                    5.465,
-                                    6.205,
-                                    5.75,
-                                    6.205,
-                                    5.75,
-                                    6.35,
-                                    5.465,
-                                    6.35
+                                    2.295,
+                                    7.665,
+                                    4.87,
+                                    7.665,
+                                    4.87,
+                                    8.54,
+                                    2.295,
+                                    8.54
                                 ]
                             }
                         ],
-                        "spans": [
-                            {
-                                "offset": 326,
-                                "length": 4
-                            }
-                        ],
-                        "confidence": 0.97
-                    },
-                    "Customer Address": {
-                        "valueType": "string",
-                        "value": "Kingdom Street London W2 6BD United Kingdom",
-                        "content": "Kingdom Street London W2 6BD United Kingdom",
-                        "boundingRegions": [
-                            {
-                                "pageNumber": 1,
-                                "polygon": [
-                                    6.43,
-                                    2.205,
-                                    7.425,
-                                    2.205,
-                                    7.425,
-                                    2.865,
-                                    6.43,
-                                    2.865
-                                ]
-                            }
-                        ],
-                        "spans": [
-                            {
-                                "offset": 123,
-                                "length": 43
-                            }
-                        ],
-                        "confidence": 0.944
+                        "spans": [],
+                        "confidence": 0.995
                     },
                     "Issued Date": {
                         "valueType": "string",
@@ -2842,27 +2810,86 @@
                         ],
                         "confidence": 0.995
                     },
-                    "Customer Signature": {
-                        "valueType": "signature",
-                        "value": "unsigned",
-                        "content": null,
+                    "Customer Address": {
+                        "valueType": "string",
+                        "value": "Kingdom Street London W2 6BD United Kingdom",
+                        "content": "Kingdom Street London W2 6BD United Kingdom",
                         "boundingRegions": [
                             {
                                 "pageNumber": 1,
                                 "polygon": [
-                                    2.58,
-                                    7.695,
-                                    3.875,
-                                    7.695,
-                                    3.875,
-                                    8.465,
-                                    2.58,
-                                    8.465
+                                    6.43,
+                                    2.205,
+                                    7.425,
+                                    2.205,
+                                    7.425,
+                                    2.865,
+                                    6.43,
+                                    2.865
                                 ]
                             }
                         ],
-                        "spans": [],
+                        "spans": [
+                            {
+                                "offset": 123,
+                                "length": 43
+                            }
+                        ],
+                        "confidence": 0.944
+                    },
+                    "Customer Name": {
+                        "valueType": "string",
+                        "value": "MADE Apps",
+                        "content": "MADE Apps",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    6.65,
+                                    2.03,
+                                    7.425,
+                                    2.03,
+                                    7.425,
+                                    2.2,
+                                    6.65,
+                                    2.2
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 113,
+                                "length": 9
+                            }
+                        ],
                         "confidence": 0.995
+                    },
+                    "Total Quantity": {
+                        "valueType": "string",
+                        "value": "10.5",
+                        "content": "10.5",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    5.465,
+                                    6.205,
+                                    5.75,
+                                    6.205,
+                                    5.75,
+                                    6.35,
+                                    5.465,
+                                    6.35
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 326,
+                                "length": 4
+                            }
+                        ],
+                        "confidence": 0.977
                     },
                     "Paid Stamp": {
                         "valueType": "signature",
@@ -2872,14 +2899,36 @@
                             {
                                 "pageNumber": 1,
                                 "polygon": [
-                                    4.42,
+                                    1.66,
                                     1.555,
                                     6.21,
                                     1.555,
                                     6.21,
-                                    2.995,
-                                    4.42,
-                                    2.995
+                                    4.59,
+                                    1.66,
+                                    4.59
+                                ]
+                            }
+                        ],
+                        "spans": [],
+                        "confidence": 0.995
+                    },
+                    "Distributor Signature": {
+                        "valueType": "signature",
+                        "value": "signed",
+                        "content": null,
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    2.505,
+                                    6.99,
+                                    4.795,
+                                    6.99,
+                                    4.795,
+                                    7.69,
+                                    2.505,
+                                    7.69
                                 ]
                             }
                         ],
@@ -2911,29 +2960,7 @@
                                 "length": 5
                             }
                         ],
-                        "confidence": 0.964
-                    },
-                    "Distributor Signature": {
-                        "valueType": "signature",
-                        "value": "signed",
-                        "content": null,
-                        "boundingRegions": [
-                            {
-                                "pageNumber": 1,
-                                "polygon": [
-                                    2.465,
-                                    6.955,
-                                    4.725,
-                                    6.955,
-                                    4.725,
-                                    7.725,
-                                    2.465,
-                                    7.725
-                                ]
-                            }
-                        ],
-                        "spans": [],
-                        "confidence": 0.995
+                        "confidence": 0.965
                     },
                     "Distributor Signature Date": {
                         "valueType": "string",
@@ -2961,33 +2988,6 @@
                             }
                         ],
                         "confidence": 0.995
-                    },
-                    "Customer Name": {
-                        "valueType": "string",
-                        "value": "MADE Apps",
-                        "content": "MADE Apps",
-                        "boundingRegions": [
-                            {
-                                "pageNumber": 1,
-                                "polygon": [
-                                    6.65,
-                                    2.03,
-                                    7.425,
-                                    2.03,
-                                    7.425,
-                                    2.2,
-                                    6.65,
-                                    2.2
-                                ]
-                            }
-                        ],
-                        "spans": [
-                            {
-                                "offset": 113,
-                                "length": 9
-                            }
-                        ],
-                        "confidence": 0.994
                     },
                     "Customer Signature Date": {
                         "valueType": "string",
