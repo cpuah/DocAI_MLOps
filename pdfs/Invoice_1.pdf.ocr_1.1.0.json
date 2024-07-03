@@ -1,7 +1,7 @@
 {
     "status": "succeeded",
-    "createdDateTime": "2024-07-03T05:55:46Z",
-    "lastUpdatedDateTime": "2024-07-03T05:55:46Z",
+    "createdDateTime": "2024-07-03T06:34:17Z",
+    "lastUpdatedDateTime": "2024-07-03T06:34:17Z",
     "analyzeResult": {
         "apiVersion": "2023-07-31",
         "modelId": "invoices-1.1.0",
@@ -3380,7 +3380,7 @@
                                 "length": 4
                             }
                         ],
-                        "confidence": 0.969
+                        "confidence": 0.963
                     },
                     "Customer Address": {
                         "valueType": "string",
@@ -3407,7 +3407,7 @@
                                 "length": 43
                             }
                         ],
-                        "confidence": 0.944
+                        "confidence": 0.945
                     },
                     "Customer Signature Date": {
                         "valueType": "string",
@@ -3434,7 +3434,7 @@
                                 "length": 9
                             }
                         ],
-                        "confidence": 0.978
+                        "confidence": 0.985
                     },
                     "Total Price": {
                         "valueType": "string",
@@ -3461,7 +3461,7 @@
                                 "length": 5
                             }
                         ],
-                        "confidence": 0.961
+                        "confidence": 0.966
                     },
                     "Paid Stamp": {
                         "valueType": "signature",
@@ -3510,7 +3510,7 @@
                                 "length": 9
                             }
                         ],
-                        "confidence": 0.994
+                        "confidence": 0.995
                     },
                     "Distributor Signature": {
                         "valueType": "signature",
@@ -3522,12 +3522,12 @@
                                 "polygon": [
                                     2.43,
                                     7.305,
-                                    4.7,
+                                    4.81,
                                     7.305,
-                                    4.7,
-                                    7.865,
+                                    4.81,
+                                    7.9,
                                     2.43,
-                                    7.865
+                                    7.9
                                 ]
                             }
                         ],
@@ -3542,13 +3542,13 @@
                             {
                                 "pageNumber": 1,
                                 "polygon": [
-                                    2.285,
-                                    7.87,
-                                    4.315,
-                                    7.87,
-                                    4.315,
+                                    2.18,
+                                    7.835,
+                                    4.175,
+                                    7.835,
+                                    4.175,
                                     8.85,
-                                    2.285,
+                                    2.18,
                                     8.85
                                 ]
                             }

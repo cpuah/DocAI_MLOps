@@ -1,7 +1,7 @@
 {
     "status": "succeeded",
-    "createdDateTime": "2024-07-03T05:50:50Z",
-    "lastUpdatedDateTime": "2024-07-03T05:50:50Z",
+    "createdDateTime": "2024-07-03T06:31:56Z",
+    "lastUpdatedDateTime": "2024-07-03T06:31:56Z",
     "analyzeResult": {
         "apiVersion": "2023-07-31",
         "modelId": "invoices-1.0.0",
@@ -3380,7 +3380,7 @@
                                 "length": 4
                             }
                         ],
-                        "confidence": 0.953
+                        "confidence": 0.962
                     },
                     "Customer Address": {
                         "valueType": "string",
@@ -3407,7 +3407,7 @@
                                 "length": 43
                             }
                         ],
-                        "confidence": 0.943
+                        "confidence": 0.932
                     },
                     "Customer Signature Date": {
                         "valueType": "string",
@@ -3434,7 +3434,7 @@
                                 "length": 9
                             }
                         ],
-                        "confidence": 0.967
+                        "confidence": 0.964
                     },
                     "Total Price": {
                         "valueType": "string",
@@ -3461,7 +3461,7 @@
                                 "length": 5
                             }
                         ],
-                        "confidence": 0.953
+                        "confidence": 0.947
                     },
                     "Paid Stamp": {
                         "valueType": "signature",
@@ -3581,7 +3581,7 @@
                                 "length": 9
                             }
                         ],
-                        "confidence": 0.995
+                        "confidence": 0.994
                     },
                     "Customer Name": {
                         "valueType": "string",
@@ -3608,7 +3608,7 @@
                                 "length": 9
                             }
                         ],
-                        "confidence": 0.993
+                        "confidence": 0.992
                     },
                     "Items": {
                         "valueType": "list",
