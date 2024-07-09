@@ -1,10 +1,10 @@
 {
     "status": "succeeded",
-    "createdDateTime": "2024-07-08T07:03:38Z",
-    "lastUpdatedDateTime": "2024-07-08T07:03:38Z",
+    "createdDateTime": "2024-07-09T03:50:48Z",
+    "lastUpdatedDateTime": "2024-07-09T03:50:48Z",
     "analyzeResult": {
         "apiVersion": "2023-07-31",
-        "modelId": "Combivan",
+        "modelId": "Alton",
         "content": "Alton\nA\nINVOICE\nAlton Goods Pty Ltd ABN: 37 632 681 228 6/264 South Pine Rd Brendale QLD 4500 support@altongoods.com | 07 3113 9272\nSHIPPING ADDRESS Calvin Puah +61403680398 calvinpuah@gmail.com Parcel Locker 10125 29429, Walkerville LPO, 92 Walkerville Terrace, Walkerville, South Australia, 5081, Australia\nAmount: AU$168.94 Order Number: AG42923 Order Date: 12/06/2024 21:58:15\nItems\nQty\nPrice\nSubtotal\nTitanium Frying Pan - Ceramic Coated SKU: TFP\n1\nAU$54.95\nAU$54.95\nUltralight Titanium Grill SKU: TG Variant: Small (25.5 x 16.5cm)\n1\nAU$65.00\nAU$65.00\nClosed Cell Foam Sleeping Mat (R2) SKU: CCFISMR Variant: Regular\n1\nAU$48.99\nAU$48.99\nShipping\nAU$0.00\nTax (Included)\nAU$15.36\nGrand total\nAU$168.94\nPaid by customer\nAU$168.94\nPAYMENT INFORMATION\nCalvin Puah Parcel Locker 10125 29429, Walkerville LPO, 92 Walkerville Terrace, Walkerville, South Australia, 5081, Australia\nOur Warranty Against Defects can be found at https://altongoods.com/pages/warranty-against- defects",
         "languages": [],
         "pages": [
@@ -4186,7 +4186,7 @@
         "styles": [],
         "documents": [
             {
-                "docType": "Combivan:Alton",
+                "docType": "Alton",
                 "boundingRegions": [
                     {
                         "pageNumber": 1,
