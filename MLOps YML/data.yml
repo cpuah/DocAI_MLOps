@@ -1,0 +1,3835 @@
+&id001 !!python/object:azure.ai.ml.entities._job.pipeline.pipeline_job.PipelineJob
+_Resource__source_path: ''
+_base_path: c:\Users\CalvinPuah-Pernix\VSCodeSaves\DocAIMLOps\DocAI_MLOps\MLOps YML
+_creation_context: !!python/object:azure.ai.ml.entities._system_data.SystemData
+  created_at: 2024-07-24 08:23:36.489116+00:00
+  created_by: 07a704db-9ced-440e-94be-6b0247b5ec6e
+  created_by_type: Application
+  last_modified_at: null
+  last_modified_by: null
+  last_modified_by_type: null
+_default_code: null
+_default_environment: null
+_id: /subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/resourceGroups/rg-pnxmlopsv2-0002prod/providers/Microsoft.MachineLearningServices/workspaces/mlw-pnxmlopsv2-0002prod/jobs/lemon_rhythm_sgmmh4rf1b
+_inputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.InputsAttrDict
+  dictitems:
+    enable_monitoring: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineInput
+      _attribute_map: {}
+      _data: 'false'
+      _default_data: null
+      _description: null
+      _group_names: []
+      _meta: null
+      _mode: null
+      _name: ''
+      _original_data: 'false'
+      _owner: *id001
+      _port_name: enable_monitoring
+      _type: null
+      _version: ''
+    input: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineInput
+      _attribute_map: {}
+      _data: &id002 !!python/object:azure.ai.ml.entities._inputs_outputs.input.Input
+        _is_inferred_optional: false
+        _port_name: null
+        datastore: null
+        default: null
+        description: null
+        enum: null
+        max: null
+        min: null
+        mode: ro_mount
+        optional: null
+        path: taxi-data:5
+        path_on_compute: null
+        type: uri_file
+      _default_data: null
+      _description: null
+      _group_names: []
+      _meta: null
+      _mode: ro_mount
+      _name: ''
+      _original_data: *id002
+      _owner: *id001
+      _port_name: input
+      _type: null
+      _version: ''
+    table_name: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineInput
+      _attribute_map: {}
+      _data: taximonitoring
+      _default_data: null
+      _description: null
+      _group_names: []
+      _meta: null
+      _mode: null
+      _name: ''
+      _original_data: taximonitoring
+      _owner: *id001
+      _port_name: table_name
+      _type: null
+      _version: ''
+_jobs: {}
+_log_files: null
+_outputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.OutputsAttrDict
+  dictitems:
+    evaluation_output: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineOutput
+      _attribute_map: {}
+      _binding_output: null
+      _data: &id003 !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+        _intellectual_property: null
+        _is_primitive_type: false
+        _port_name: null
+        description: null
+        early_available: null
+        mode: rw_mount
+        name: null
+        path: null
+        path_on_compute: null
+        type: uri_folder
+        version: null
+      _default_data: null
+      _description: null
+      _meta: *id003
+      _mode: rw_mount
+      _name: null
+      _original_data: *id003
+      _owner: *id001
+      _port_name: evaluation_output
+      _type: uri_folder
+      _version: null
+    model_info_output_path: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineOutput
+      _attribute_map: {}
+      _binding_output: null
+      _data: &id004 !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+        _intellectual_property: null
+        _is_primitive_type: false
+        _port_name: null
+        description: null
+        early_available: null
+        mode: rw_mount
+        name: null
+        path: null
+        path_on_compute: null
+        type: uri_folder
+        version: null
+      _default_data: null
+      _description: null
+      _meta: *id004
+      _mode: rw_mount
+      _name: null
+      _original_data: *id004
+      _owner: *id001
+      _port_name: model_info_output_path
+      _type: uri_folder
+      _version: null
+    test_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineOutput
+      _attribute_map: {}
+      _binding_output: null
+      _data: &id005 !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+        _intellectual_property: null
+        _is_primitive_type: false
+        _port_name: null
+        description: null
+        early_available: null
+        mode: rw_mount
+        name: null
+        path: null
+        path_on_compute: null
+        type: uri_folder
+        version: null
+      _default_data: null
+      _description: null
+      _meta: *id005
+      _mode: rw_mount
+      _name: null
+      _original_data: *id005
+      _owner: *id001
+      _port_name: test_data
+      _type: uri_folder
+      _version: null
+    train_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineOutput
+      _attribute_map: {}
+      _binding_output: null
+      _data: &id006 !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+        _intellectual_property: null
+        _is_primitive_type: false
+        _port_name: null
+        description: null
+        early_available: null
+        mode: rw_mount
+        name: null
+        path: null
+        path_on_compute: null
+        type: uri_folder
+        version: null
+      _default_data: null
+      _description: null
+      _meta: *id006
+      _mode: rw_mount
+      _name: null
+      _original_data: *id006
+      _owner: *id001
+      _port_name: train_data
+      _type: uri_folder
+      _version: null
+    trained_model: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineOutput
+      _attribute_map: {}
+      _binding_output: null
+      _data: &id007 !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+        _intellectual_property: null
+        _is_primitive_type: false
+        _port_name: null
+        description: null
+        early_available: null
+        mode: rw_mount
+        name: null
+        path: null
+        path_on_compute: null
+        type: uri_folder
+        version: null
+      _default_data: null
+      _description: null
+      _meta: *id007
+      _mode: rw_mount
+      _name: null
+      _original_data: *id007
+      _owner: *id001
+      _port_name: trained_model
+      _type: uri_folder
+      _version: null
+    val_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.PipelineOutput
+      _attribute_map: {}
+      _binding_output: null
+      _data: &id008 !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+        _intellectual_property: null
+        _is_primitive_type: false
+        _port_name: null
+        description: null
+        early_available: null
+        mode: rw_mount
+        name: null
+        path: null
+        path_on_compute: null
+        type: uri_folder
+        version: null
+      _default_data: null
+      _description: null
+      _meta: *id008
+      _mode: rw_mount
+      _name: null
+      _original_data: *id008
+      _owner: *id001
+      _port_name: val_data
+      _type: uri_folder
+      _version: null
+_print_as_yaml: false
+_serialize: &id009 !!python/object:msrest.serialization.Serializer
+  client_side_validation: false
+  dependencies:
+    AKS: &id012 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AKS ''
+    AKSSchema: &id013 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AKSSchema ''
+    AKSSchemaProperties: &id014 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AKSSchemaProperties ''
+    AccountKeyDatastoreCredentials: &id015 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AccountKeyDatastoreCredentials ''
+    AccountKeyDatastoreSecrets: &id016 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AccountKeyDatastoreSecrets ''
+    AksComputeSecrets: &id017 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AksComputeSecrets ''
+    AksComputeSecretsProperties: &id018 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AksComputeSecretsProperties ''
+    AksNetworkingConfiguration: &id019 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AksNetworkingConfiguration ''
+    AllocationState: &id020 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.AllocationState ''
+    AmlCompute: &id021 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlCompute ''
+    AmlComputeNodeInformation: &id022 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlComputeNodeInformation ''
+    AmlComputeNodesInformation: &id023 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlComputeNodesInformation ''
+    AmlComputeProperties: &id024 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlComputeProperties ''
+    AmlComputeSchema: &id025 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlComputeSchema ''
+    AmlOperation: &id026 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlOperation ''
+    AmlOperationDisplay: &id027 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlOperationDisplay ''
+    AmlOperationListResult: &id028 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlOperationListResult ''
+    AmlToken: &id029 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlToken ''
+    AmlUserFeature: &id030 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AmlUserFeature ''
+    ApplicationSharingPolicy: &id031 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ApplicationSharingPolicy ''
+    AssetBase: &id032 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AssetBase ''
+    AssetContainer: &id033 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AssetContainer ''
+    AssetJobInput: &id034 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AssetJobInput ''
+    AssetJobOutput: &id035 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AssetJobOutput ''
+    AssetReferenceBase: &id036 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AssetReferenceBase ''
+    AssignedUser: &id037 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AssignedUser ''
+    AutoForecastHorizon: &id038 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoForecastHorizon ''
+    AutoMLJob: &id039 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoMLJob ''
+    AutoMLVertical: &id040 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoMLVertical ''
+    AutoNCrossValidations: &id041 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoNCrossValidations ''
+    AutoPauseProperties: &id042 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoPauseProperties ''
+    AutoRebuildSetting: &id043 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.AutoRebuildSetting ''
+    AutoScaleProperties: &id044 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoScaleProperties ''
+    AutoSeasonality: &id045 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoSeasonality ''
+    AutoTargetLags: &id046 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoTargetLags ''
+    AutoTargetRollingWindowSize: &id047 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AutoTargetRollingWindowSize ''
+    Autosave: &id048 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.Autosave ''
+    AzureBlobDatastore: &id049 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AzureBlobDatastore ''
+    AzureDataLakeGen1Datastore: &id050 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AzureDataLakeGen1Datastore ''
+    AzureDataLakeGen2Datastore: &id051 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AzureDataLakeGen2Datastore ''
+    AzureFileDatastore: &id052 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.AzureFileDatastore ''
+    BanditPolicy: &id053 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BanditPolicy ''
+    BatchDeployment: &id054 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BatchDeployment ''
+    BatchDeploymentProperties: &id055 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BatchDeploymentProperties ''
+    BatchDeploymentTrackedResourceArmPaginatedResult: &id056 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BatchDeploymentTrackedResourceArmPaginatedResult ''
+    BatchEndpoint: &id057 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BatchEndpoint ''
+    BatchEndpointDefaults: &id058 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BatchEndpointDefaults ''
+    BatchEndpointProperties: &id059 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BatchEndpointProperties ''
+    BatchEndpointTrackedResourceArmPaginatedResult: &id060 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BatchEndpointTrackedResourceArmPaginatedResult ''
+    BatchLoggingLevel: &id061 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.BatchLoggingLevel ''
+    BatchOutputAction: &id062 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.BatchOutputAction ''
+    BatchRetrySettings: &id063 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BatchRetrySettings ''
+    BayesianSamplingAlgorithm: &id064 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BayesianSamplingAlgorithm ''
+    BillingCurrency: &id065 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.BillingCurrency ''
+    BlockedTransformers: &id066 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.BlockedTransformers ''
+    BuildContext: &id067 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.BuildContext ''
+    Caching: &id068 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.Caching ''
+    CertificateDatastoreCredentials: &id069 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CertificateDatastoreCredentials ''
+    CertificateDatastoreSecrets: &id070 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CertificateDatastoreSecrets ''
+    Classification: &id071 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Classification ''
+    ClassificationModels: &id072 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ClassificationModels ''
+    ClassificationMultilabelPrimaryMetrics: &id073 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ClassificationMultilabelPrimaryMetrics ''
+    ClassificationPrimaryMetrics: &id074 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ClassificationPrimaryMetrics ''
+    ClassificationTrainingSettings: &id075 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ClassificationTrainingSettings ''
+    ClusterPurpose: &id076 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ClusterPurpose ''
+    ClusterUpdateParameters: &id077 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ClusterUpdateParameters ''
+    CodeConfiguration: &id078 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CodeConfiguration ''
+    CodeContainer: &id079 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CodeContainer ''
+    CodeContainerProperties: &id080 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CodeContainerProperties ''
+    CodeContainerResourceArmPaginatedResult: &id081 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CodeContainerResourceArmPaginatedResult ''
+    CodeVersion: &id082 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CodeVersion ''
+    CodeVersionProperties: &id083 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CodeVersionProperties ''
+    CodeVersionResourceArmPaginatedResult: &id084 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CodeVersionResourceArmPaginatedResult ''
+    ColumnTransformer: &id085 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ColumnTransformer ''
+    CommandJob: &id086 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CommandJob ''
+    CommandJobLimits: &id087 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CommandJobLimits ''
+    ComponentContainer: &id088 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComponentContainer ''
+    ComponentContainerProperties: &id089 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComponentContainerProperties ''
+    ComponentContainerResourceArmPaginatedResult: &id090 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComponentContainerResourceArmPaginatedResult ''
+    ComponentVersion: &id091 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComponentVersion ''
+    ComponentVersionProperties: &id092 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComponentVersionProperties ''
+    ComponentVersionResourceArmPaginatedResult: &id093 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComponentVersionResourceArmPaginatedResult ''
+    Compute: &id094 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Compute ''
+    ComputeInstance: &id095 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstance ''
+    ComputeInstanceApplication: &id096 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceApplication ''
+    ComputeInstanceAuthorizationType: &id097 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ComputeInstanceAuthorizationType ''
+    ComputeInstanceConnectivityEndpoints: &id098 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceConnectivityEndpoints ''
+    ComputeInstanceContainer: &id099 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceContainer ''
+    ComputeInstanceCreatedBy: &id100 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceCreatedBy ''
+    ComputeInstanceDataDisk: &id101 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceDataDisk ''
+    ComputeInstanceDataMount: &id102 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceDataMount ''
+    ComputeInstanceEnvironmentInfo: &id103 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceEnvironmentInfo ''
+    ComputeInstanceLastOperation: &id104 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceLastOperation ''
+    ComputeInstanceProperties: &id105 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceProperties ''
+    ComputeInstanceSchema: &id106 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceSchema ''
+    ComputeInstanceSshSettings: &id107 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceSshSettings ''
+    ComputeInstanceState: &id108 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ComputeInstanceState ''
+    ComputeInstanceVersion: &id109 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeInstanceVersion ''
+    ComputePowerAction: &id110 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ComputePowerAction ''
+    ComputeResource: &id111 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeResource ''
+    ComputeResourceSchema: &id112 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeResourceSchema ''
+    ComputeSchedules: &id113 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeSchedules ''
+    ComputeSecrets: &id114 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeSecrets ''
+    ComputeStartStopSchedule: &id115 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ComputeStartStopSchedule ''
+    ComputeType: &id116 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ComputeType ''
+    ConnectionAuthType: &id117 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ConnectionAuthType ''
+    ConnectionCategory: &id118 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ConnectionCategory ''
+    ContainerResourceRequirements: &id119 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ContainerResourceRequirements ''
+    ContainerResourceSettings: &id120 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ContainerResourceSettings ''
+    ContainerType: &id121 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ContainerType ''
+    CosmosDbSettings: &id122 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CosmosDbSettings ''
+    CreatedByType: &id123 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.CreatedByType ''
+    CredentialsType: &id124 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.CredentialsType ''
+    CronTrigger: &id125 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CronTrigger ''
+    CustomForecastHorizon: &id126 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CustomForecastHorizon ''
+    CustomModelJobInput: &id127 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CustomModelJobInput ''
+    CustomModelJobOutput: &id128 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CustomModelJobOutput ''
+    CustomNCrossValidations: &id129 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CustomNCrossValidations ''
+    CustomSeasonality: &id130 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CustomSeasonality ''
+    CustomTargetLags: &id131 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CustomTargetLags ''
+    CustomTargetRollingWindowSize: &id132 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.CustomTargetRollingWindowSize ''
+    DataContainer: &id133 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataContainer ''
+    DataContainerProperties: &id134 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataContainerProperties ''
+    DataContainerResourceArmPaginatedResult: &id135 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataContainerResourceArmPaginatedResult ''
+    DataFactory: &id136 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataFactory ''
+    DataLakeAnalytics: &id137 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataLakeAnalytics ''
+    DataLakeAnalyticsSchema: &id138 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataLakeAnalyticsSchema ''
+    DataLakeAnalyticsSchemaProperties: &id139 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataLakeAnalyticsSchemaProperties ''
+    DataPathAssetReference: &id140 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataPathAssetReference ''
+    DataType: &id141 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.DataType ''
+    DataVersionBase: &id142 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataVersionBase ''
+    DataVersionBaseProperties: &id143 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataVersionBaseProperties ''
+    DataVersionBaseResourceArmPaginatedResult: &id144 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DataVersionBaseResourceArmPaginatedResult ''
+    Databricks: &id145 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Databricks ''
+    DatabricksComputeSecrets: &id146 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DatabricksComputeSecrets ''
+    DatabricksComputeSecretsProperties: &id147 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DatabricksComputeSecretsProperties ''
+    DatabricksProperties: &id148 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DatabricksProperties ''
+    DatabricksSchema: &id149 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DatabricksSchema ''
+    Datastore: &id150 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Datastore ''
+    DatastoreCredentials: &id151 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DatastoreCredentials ''
+    DatastoreProperties: &id152 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DatastoreProperties ''
+    DatastoreResourceArmPaginatedResult: &id153 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DatastoreResourceArmPaginatedResult ''
+    DatastoreSecrets: &id154 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DatastoreSecrets ''
+    DatastoreType: &id155 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.DatastoreType ''
+    DefaultScaleSettings: &id156 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DefaultScaleSettings ''
+    DeploymentLogs: &id157 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DeploymentLogs ''
+    DeploymentLogsRequest: &id158 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DeploymentLogsRequest ''
+    DeploymentProvisioningState: &id159 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.DeploymentProvisioningState ''
+    DeploymentResourceConfiguration: &id160 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DeploymentResourceConfiguration ''
+    DiagnoseRequestProperties: &id161 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DiagnoseRequestProperties ''
+    DiagnoseResponseResult: &id162 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DiagnoseResponseResult ''
+    DiagnoseResponseResultValue: &id163 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DiagnoseResponseResultValue ''
+    DiagnoseResult: &id164 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DiagnoseResult ''
+    DiagnoseResultLevel: &id165 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.DiagnoseResultLevel ''
+    DiagnoseWorkspaceParameters: &id166 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DiagnoseWorkspaceParameters ''
+    DistributionConfiguration: &id167 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.DistributionConfiguration ''
+    DistributionType: &id168 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.DistributionType ''
+    EarlyTerminationPolicy: &id169 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EarlyTerminationPolicy ''
+    EarlyTerminationPolicyType: &id170 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.EarlyTerminationPolicyType ''
+    EgressPublicNetworkAccessType: &id171 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.EgressPublicNetworkAccessType ''
+    EncryptionKeyVaultProperties: &id172 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EncryptionKeyVaultProperties ''
+    EncryptionProperty: &id173 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EncryptionProperty ''
+    EncryptionStatus: &id174 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.EncryptionStatus ''
+    EndpointAuthKeys: &id175 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EndpointAuthKeys ''
+    EndpointAuthMode: &id176 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.EndpointAuthMode ''
+    EndpointAuthToken: &id177 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EndpointAuthToken ''
+    EndpointComputeType: &id178 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.EndpointComputeType ''
+    EndpointDeploymentPropertiesBase: &id179 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EndpointDeploymentPropertiesBase ''
+    EndpointPropertiesBase: &id180 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EndpointPropertiesBase ''
+    EndpointProvisioningState: &id181 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.EndpointProvisioningState ''
+    EndpointScheduleAction: &id182 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EndpointScheduleAction ''
+    EnvironmentContainer: &id183 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EnvironmentContainer ''
+    EnvironmentContainerProperties: &id184 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EnvironmentContainerProperties ''
+    EnvironmentContainerResourceArmPaginatedResult: &id185 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EnvironmentContainerResourceArmPaginatedResult ''
+    EnvironmentType: &id186 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.EnvironmentType ''
+    EnvironmentVersion: &id187 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EnvironmentVersion ''
+    EnvironmentVersionProperties: &id188 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EnvironmentVersionProperties ''
+    EnvironmentVersionResourceArmPaginatedResult: &id189 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EnvironmentVersionResourceArmPaginatedResult ''
+    ErrorAdditionalInfo: &id190 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ErrorAdditionalInfo ''
+    ErrorDetail: &id191 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ErrorDetail ''
+    ErrorResponse: &id192 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ErrorResponse ''
+    EstimatedVMPrice: &id193 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EstimatedVMPrice ''
+    EstimatedVMPrices: &id194 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.EstimatedVMPrices ''
+    ExternalFQDNResponse: &id195 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ExternalFQDNResponse ''
+    FQDNEndpoint: &id196 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.FQDNEndpoint ''
+    FQDNEndpointDetail: &id197 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.FQDNEndpointDetail ''
+    FQDNEndpoints: &id198 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.FQDNEndpoints ''
+    FQDNEndpointsProperties: &id199 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.FQDNEndpointsProperties ''
+    FeatureLags: &id200 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.FeatureLags ''
+    FeaturizationMode: &id201 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.FeaturizationMode ''
+    FeaturizationSettings: &id202 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.FeaturizationSettings ''
+    FlavorData: &id203 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.FlavorData ''
+    ForecastHorizon: &id204 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ForecastHorizon ''
+    ForecastHorizonMode: &id205 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ForecastHorizonMode ''
+    Forecasting: &id206 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Forecasting ''
+    ForecastingModels: &id207 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ForecastingModels ''
+    ForecastingPrimaryMetrics: &id208 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ForecastingPrimaryMetrics ''
+    ForecastingSettings: &id209 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ForecastingSettings ''
+    ForecastingTrainingSettings: &id210 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ForecastingTrainingSettings ''
+    Goal: &id211 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.Goal ''
+    GridSamplingAlgorithm: &id212 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.GridSamplingAlgorithm ''
+    HDInsight: &id213 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.HDInsight ''
+    HDInsightProperties: &id214 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.HDInsightProperties ''
+    HDInsightSchema: &id215 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.HDInsightSchema ''
+    IdAssetReference: &id216 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.IdAssetReference ''
+    IdentityConfiguration: &id217 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.IdentityConfiguration ''
+    IdentityConfigurationType: &id218 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.IdentityConfigurationType ''
+    IdentityForCmk: &id219 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.IdentityForCmk ''
+    ImageClassification: &id220 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageClassification ''
+    ImageClassificationBase: &id221 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageClassificationBase ''
+    ImageClassificationMultilabel: &id222 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageClassificationMultilabel ''
+    ImageInstanceSegmentation: &id223 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageInstanceSegmentation ''
+    ImageLimitSettings: &id224 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageLimitSettings ''
+    ImageModelDistributionSettings: &id225 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageModelDistributionSettings ''
+    ImageModelDistributionSettingsClassification: &id226 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageModelDistributionSettingsClassification ''
+    ImageModelDistributionSettingsObjectDetection: &id227 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageModelDistributionSettingsObjectDetection ''
+    ImageModelSettings: &id228 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageModelSettings ''
+    ImageModelSettingsClassification: &id229 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageModelSettingsClassification ''
+    ImageModelSettingsObjectDetection: &id230 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageModelSettingsObjectDetection ''
+    ImageObjectDetection: &id231 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageObjectDetection ''
+    ImageObjectDetectionBase: &id232 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageObjectDetectionBase ''
+    ImageSweepSettings: &id233 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageSweepSettings ''
+    ImageVertical: &id234 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ImageVertical ''
+    InferenceContainerProperties: &id235 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.InferenceContainerProperties ''
+    InputDeliveryMode: &id236 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.InputDeliveryMode ''
+    InstanceSegmentationPrimaryMetrics: &id237 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.InstanceSegmentationPrimaryMetrics ''
+    InstanceTypeSchema: &id238 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.InstanceTypeSchema ''
+    InstanceTypeSchemaResources: &id239 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.InstanceTypeSchemaResources ''
+    JobBase: &id240 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobBase ''
+    JobBaseProperties: &id241 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobBaseProperties ''
+    JobBaseResourceArmPaginatedResult: &id242 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobBaseResourceArmPaginatedResult ''
+    JobInput: &id243 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobInput ''
+    JobInputType: &id244 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.JobInputType ''
+    JobLimits: &id245 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobLimits ''
+    JobLimitsType: &id246 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.JobLimitsType ''
+    JobOutput: &id247 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobOutput ''
+    JobOutputType: &id248 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.JobOutputType ''
+    JobResourceConfiguration: &id249 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobResourceConfiguration ''
+    JobScheduleAction: &id250 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobScheduleAction ''
+    JobService: &id251 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.JobService ''
+    JobStatus: &id252 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.JobStatus ''
+    JobType: &id253 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.JobType ''
+    KeyType: &id254 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.KeyType ''
+    Kubernetes: &id255 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Kubernetes ''
+    KubernetesOnlineDeployment: &id256 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.KubernetesOnlineDeployment ''
+    KubernetesProperties: &id257 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.KubernetesProperties ''
+    KubernetesSchema: &id258 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.KubernetesSchema ''
+    LearningRateScheduler: &id259 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.LearningRateScheduler ''
+    ListAmlUserFeatureResult: &id260 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ListAmlUserFeatureResult ''
+    ListNotebookKeysResult: &id261 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ListNotebookKeysResult ''
+    ListStorageAccountKeysResult: &id262 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ListStorageAccountKeysResult ''
+    ListUsagesResult: &id263 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ListUsagesResult ''
+    ListViewType: &id264 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ListViewType ''
+    ListWorkspaceKeysResult: &id265 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ListWorkspaceKeysResult ''
+    ListWorkspaceQuotas: &id266 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ListWorkspaceQuotas ''
+    LiteralJobInput: &id267 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.LiteralJobInput ''
+    LoadBalancerType: &id268 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.LoadBalancerType ''
+    LogVerbosity: &id269 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.LogVerbosity ''
+    MLFlowModelJobInput: &id270 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.MLFlowModelJobInput ''
+    MLFlowModelJobOutput: &id271 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.MLFlowModelJobOutput ''
+    MLTableData: &id272 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.MLTableData ''
+    MLTableJobInput: &id273 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.MLTableJobInput ''
+    MLTableJobOutput: &id274 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.MLTableJobOutput ''
+    ManagedIdentity: &id275 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ManagedIdentity ''
+    ManagedIdentityAuthTypeWorkspaceConnectionProperties: &id276 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ManagedIdentityAuthTypeWorkspaceConnectionProperties ''
+    ManagedOnlineDeployment: &id277 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ManagedOnlineDeployment ''
+    ManagedServiceIdentity: &id278 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ManagedServiceIdentity ''
+    ManagedServiceIdentityType: &id279 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ManagedServiceIdentityType ''
+    MedianStoppingPolicy: &id280 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.MedianStoppingPolicy ''
+    ModelContainer: &id281 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ModelContainer ''
+    ModelContainerProperties: &id282 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ModelContainerProperties ''
+    ModelContainerResourceArmPaginatedResult: &id283 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ModelContainerResourceArmPaginatedResult ''
+    ModelSize: &id284 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ModelSize ''
+    ModelVersion: &id285 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ModelVersion ''
+    ModelVersionProperties: &id286 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ModelVersionProperties ''
+    ModelVersionResourceArmPaginatedResult: &id287 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ModelVersionResourceArmPaginatedResult ''
+    MountAction: &id288 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.MountAction ''
+    MountState: &id289 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.MountState ''
+    Mpi: &id290 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Mpi ''
+    NCrossValidations: &id291 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NCrossValidations ''
+    NCrossValidationsMode: &id292 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.NCrossValidationsMode ''
+    Network: &id293 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.Network ''
+    NlpVertical: &id294 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NlpVertical ''
+    NlpVerticalFeaturizationSettings: &id295 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NlpVerticalFeaturizationSettings ''
+    NlpVerticalLimitSettings: &id296 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NlpVerticalLimitSettings ''
+    NodeState: &id297 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.NodeState ''
+    NodeStateCounts: &id298 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NodeStateCounts ''
+    NoneAuthTypeWorkspaceConnectionProperties: &id299 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NoneAuthTypeWorkspaceConnectionProperties ''
+    NoneDatastoreCredentials: &id300 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NoneDatastoreCredentials ''
+    NotebookAccessTokenResult: &id301 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NotebookAccessTokenResult ''
+    NotebookPreparationError: &id302 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NotebookPreparationError ''
+    NotebookResourceInfo: &id303 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.NotebookResourceInfo ''
+    ObjectDetectionPrimaryMetrics: &id304 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ObjectDetectionPrimaryMetrics ''
+    Objective: &id305 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Objective ''
+    OnlineDeployment: &id306 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OnlineDeployment ''
+    OnlineDeploymentProperties: &id307 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OnlineDeploymentProperties ''
+    OnlineDeploymentTrackedResourceArmPaginatedResult: &id308 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OnlineDeploymentTrackedResourceArmPaginatedResult ''
+    OnlineEndpoint: &id309 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OnlineEndpoint ''
+    OnlineEndpointProperties: &id310 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OnlineEndpointProperties ''
+    OnlineEndpointTrackedResourceArmPaginatedResult: &id311 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OnlineEndpointTrackedResourceArmPaginatedResult ''
+    OnlineRequestSettings: &id312 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OnlineRequestSettings ''
+    OnlineScaleSettings: &id313 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OnlineScaleSettings ''
+    OperatingSystemType: &id314 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.OperatingSystemType ''
+    OperationName: &id315 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.OperationName ''
+    OperationStatus: &id316 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.OperationStatus ''
+    OperationTrigger: &id317 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.OperationTrigger ''
+    OrderString: &id318 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.OrderString ''
+    OsType: &id319 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.OsType ''
+    OutputDeliveryMode: &id320 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.OutputDeliveryMode ''
+    OutputPathAssetReference: &id321 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.OutputPathAssetReference ''
+    PATAuthTypeWorkspaceConnectionProperties: &id322 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PATAuthTypeWorkspaceConnectionProperties ''
+    PaginatedComputeResourcesList: &id323 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PaginatedComputeResourcesList ''
+    PartialBatchDeployment: &id324 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PartialBatchDeployment ''
+    PartialBatchDeploymentPartialMinimalTrackedResourceWithProperties: &id325 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PartialBatchDeploymentPartialMinimalTrackedResourceWithProperties ''
+    PartialManagedServiceIdentity: &id326 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PartialManagedServiceIdentity ''
+    PartialMinimalTrackedResource: &id327 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PartialMinimalTrackedResource ''
+    PartialMinimalTrackedResourceWithIdentity: &id328 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PartialMinimalTrackedResourceWithIdentity ''
+    PartialMinimalTrackedResourceWithSku: &id329 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PartialMinimalTrackedResourceWithSku ''
+    PartialSku: &id330 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PartialSku ''
+    Password: &id331 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Password ''
+    PersonalComputeInstanceSettings: &id332 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PersonalComputeInstanceSettings ''
+    PipelineJob: &id333 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PipelineJob ''
+    PrivateEndpoint: &id334 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PrivateEndpoint ''
+    PrivateEndpointConnection: &id335 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PrivateEndpointConnection ''
+    PrivateEndpointConnectionListResult: &id336 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PrivateEndpointConnectionListResult ''
+    PrivateEndpointConnectionProvisioningState: &id337 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.PrivateEndpointConnectionProvisioningState ''
+    PrivateEndpointServiceConnectionStatus: &id338 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.PrivateEndpointServiceConnectionStatus ''
+    PrivateLinkResource: &id339 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PrivateLinkResource ''
+    PrivateLinkResourceListResult: &id340 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PrivateLinkResourceListResult ''
+    PrivateLinkServiceConnectionState: &id341 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PrivateLinkServiceConnectionState ''
+    ProbeSettings: &id342 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ProbeSettings ''
+    ProvisioningState: &id343 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ProvisioningState ''
+    ProvisioningStatus: &id344 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ProvisioningStatus ''
+    PublicNetworkAccess: &id345 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.PublicNetworkAccess ''
+    PublicNetworkAccessType: &id346 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.PublicNetworkAccessType ''
+    PyTorch: &id347 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.PyTorch ''
+    QuotaBaseProperties: &id348 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.QuotaBaseProperties ''
+    QuotaUnit: &id349 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.QuotaUnit ''
+    QuotaUpdateParameters: &id350 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.QuotaUpdateParameters ''
+    RandomSamplingAlgorithm: &id351 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.RandomSamplingAlgorithm ''
+    RandomSamplingAlgorithmRule: &id352 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.RandomSamplingAlgorithmRule ''
+    RecurrenceFrequency: &id353 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.RecurrenceFrequency ''
+    RecurrenceSchedule: &id354 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.RecurrenceSchedule ''
+    RecurrenceTrigger: &id355 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.RecurrenceTrigger ''
+    ReferenceType: &id356 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ReferenceType ''
+    RegenerateEndpointKeysRequest: &id357 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.RegenerateEndpointKeysRequest ''
+    RegistryListCredentialsResult: &id358 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.RegistryListCredentialsResult ''
+    Regression: &id359 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Regression ''
+    RegressionModels: &id360 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.RegressionModels ''
+    RegressionPrimaryMetrics: &id361 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.RegressionPrimaryMetrics ''
+    RegressionTrainingSettings: &id362 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.RegressionTrainingSettings ''
+    RemoteLoginPortPublicAccess: &id363 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.RemoteLoginPortPublicAccess ''
+    Resource: &id364 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Resource ''
+    ResourceBase: &id365 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ResourceBase ''
+    ResourceConfiguration: &id366 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ResourceConfiguration ''
+    ResourceId: &id367 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ResourceId ''
+    ResourceName: &id368 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ResourceName ''
+    ResourceQuota: &id369 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ResourceQuota ''
+    Route: &id370 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Route ''
+    SASAuthTypeWorkspaceConnectionProperties: &id371 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SASAuthTypeWorkspaceConnectionProperties ''
+    SamplingAlgorithm: &id372 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SamplingAlgorithm ''
+    SamplingAlgorithmType: &id373 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.SamplingAlgorithmType ''
+    SasDatastoreCredentials: &id374 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SasDatastoreCredentials ''
+    SasDatastoreSecrets: &id375 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SasDatastoreSecrets ''
+    ScaleSettings: &id376 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ScaleSettings ''
+    ScaleSettingsInformation: &id377 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ScaleSettingsInformation ''
+    ScaleType: &id378 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ScaleType ''
+    Schedule: &id379 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Schedule ''
+    ScheduleActionBase: &id380 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ScheduleActionBase ''
+    ScheduleActionType: &id381 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ScheduleActionType ''
+    ScheduleBase: &id382 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ScheduleBase ''
+    ScheduleListViewType: &id383 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ScheduleListViewType ''
+    ScheduleProperties: &id384 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ScheduleProperties ''
+    ScheduleProvisioningState: &id385 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ScheduleProvisioningState ''
+    ScheduleProvisioningStatus: &id386 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ScheduleProvisioningStatus ''
+    ScheduleResourceArmPaginatedResult: &id387 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ScheduleResourceArmPaginatedResult ''
+    ScheduleStatus: &id388 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ScheduleStatus ''
+    ScriptReference: &id389 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ScriptReference ''
+    ScriptsToExecute: &id390 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ScriptsToExecute ''
+    Seasonality: &id391 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Seasonality ''
+    SeasonalityMode: &id392 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.SeasonalityMode ''
+    SecretsType: &id393 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.SecretsType ''
+    ServiceDataAccessAuthIdentity: &id394 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ServiceDataAccessAuthIdentity ''
+    ServiceManagedResourcesSettings: &id395 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ServiceManagedResourcesSettings ''
+    ServicePrincipalDatastoreCredentials: &id396 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ServicePrincipalDatastoreCredentials ''
+    ServicePrincipalDatastoreSecrets: &id397 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.ServicePrincipalDatastoreSecrets ''
+    SetupScripts: &id398 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SetupScripts ''
+    SharedPrivateLinkResource: &id399 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SharedPrivateLinkResource ''
+    ShortSeriesHandlingConfiguration: &id400 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ShortSeriesHandlingConfiguration ''
+    Sku: &id401 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Sku ''
+    SkuCapacity: &id402 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SkuCapacity ''
+    SkuResource: &id403 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SkuResource ''
+    SkuResourceArmPaginatedResult: &id404 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SkuResourceArmPaginatedResult ''
+    SkuScaleType: &id405 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.SkuScaleType ''
+    SkuSetting: &id406 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SkuSetting ''
+    SkuTier: &id407 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.SkuTier ''
+    SourceType: &id408 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.SourceType ''
+    SshPublicAccess: &id409 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.SshPublicAccess ''
+    SslConfigStatus: &id410 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.SslConfigStatus ''
+    SslConfiguration: &id411 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SslConfiguration ''
+    StackEnsembleSettings: &id412 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.StackEnsembleSettings ''
+    StackMetaLearnerType: &id413 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.StackMetaLearnerType ''
+    Status: &id414 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.Status ''
+    StochasticOptimizer: &id415 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.StochasticOptimizer ''
+    StorageAccountType: &id416 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.StorageAccountType ''
+    SweepJob: &id417 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SweepJob ''
+    SweepJobLimits: &id418 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SweepJobLimits ''
+    SynapseSpark: &id419 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SynapseSpark ''
+    SynapseSparkProperties: &id420 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SynapseSparkProperties ''
+    SystemData: &id421 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SystemData ''
+    SystemService: &id422 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.SystemService ''
+    TableVertical: &id423 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TableVertical ''
+    TableVerticalFeaturizationSettings: &id424 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TableVerticalFeaturizationSettings ''
+    TableVerticalLimitSettings: &id425 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TableVerticalLimitSettings ''
+    TargetAggregationFunction: &id426 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.TargetAggregationFunction ''
+    TargetLags: &id427 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TargetLags ''
+    TargetLagsMode: &id428 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.TargetLagsMode ''
+    TargetRollingWindowSize: &id429 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TargetRollingWindowSize ''
+    TargetRollingWindowSizeMode: &id430 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.TargetRollingWindowSizeMode ''
+    TargetUtilizationScaleSettings: &id431 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TargetUtilizationScaleSettings ''
+    TaskType: &id432 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.TaskType ''
+    TensorFlow: &id433 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TensorFlow ''
+    TextClassification: &id434 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TextClassification ''
+    TextClassificationMultilabel: &id435 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TextClassificationMultilabel ''
+    TextNer: &id436 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TextNer ''
+    TrackedResource: &id437 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TrackedResource ''
+    TrainingSettings: &id438 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TrainingSettings ''
+    TrialComponent: &id439 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TrialComponent ''
+    TriggerBase: &id440 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TriggerBase ''
+    TriggerType: &id441 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.TriggerType ''
+    TritonModelJobInput: &id442 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TritonModelJobInput ''
+    TritonModelJobOutput: &id443 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TritonModelJobOutput ''
+    TruncationSelectionPolicy: &id444 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.TruncationSelectionPolicy ''
+    UnderlyingResourceAction: &id445 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.UnderlyingResourceAction ''
+    UnitOfMeasure: &id446 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.UnitOfMeasure ''
+    UpdateWorkspaceQuotas: &id447 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UpdateWorkspaceQuotas ''
+    UpdateWorkspaceQuotasResult: &id448 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UpdateWorkspaceQuotasResult ''
+    UriFileDataVersion: &id449 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UriFileDataVersion ''
+    UriFileJobInput: &id450 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UriFileJobInput ''
+    UriFileJobOutput: &id451 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UriFileJobOutput ''
+    UriFolderDataVersion: &id452 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UriFolderDataVersion ''
+    UriFolderJobInput: &id453 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UriFolderJobInput ''
+    UriFolderJobOutput: &id454 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UriFolderJobOutput ''
+    Usage: &id455 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Usage ''
+    UsageName: &id456 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UsageName ''
+    UsageUnit: &id457 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.UsageUnit ''
+    UseStl: &id458 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.UseStl ''
+    UserAccountCredentials: &id459 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UserAccountCredentials ''
+    UserAssignedIdentity: &id460 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UserAssignedIdentity ''
+    UserIdentity: &id461 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UserIdentity ''
+    UsernamePasswordAuthTypeWorkspaceConnectionProperties: &id462 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.UsernamePasswordAuthTypeWorkspaceConnectionProperties ''
+    VMPriceOSType: &id463 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.VMPriceOSType ''
+    VMTier: &id464 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.VMTier ''
+    ValidationMetricType: &id465 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ValidationMetricType ''
+    ValueFormat: &id466 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.ValueFormat ''
+    VirtualMachine: &id467 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachine ''
+    VirtualMachineImage: &id468 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachineImage ''
+    VirtualMachineSchema: &id469 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachineSchema ''
+    VirtualMachineSchemaProperties: &id470 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachineSchemaProperties ''
+    VirtualMachineSecrets: &id471 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachineSecrets ''
+    VirtualMachineSecretsSchema: &id472 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachineSecretsSchema ''
+    VirtualMachineSize: &id473 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachineSize ''
+    VirtualMachineSizeListResult: &id474 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachineSizeListResult ''
+    VirtualMachineSshCredentials: &id475 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.VirtualMachineSshCredentials ''
+    VmPriority: &id476 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.VmPriority ''
+    WeekDay: &id477 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._azure_machine_learning_workspaces_enums.WeekDay ''
+    Workspace: &id478 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.Workspace ''
+    WorkspaceConnectionManagedIdentity: &id479 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceConnectionManagedIdentity ''
+    WorkspaceConnectionPersonalAccessToken: &id480 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceConnectionPersonalAccessToken ''
+    WorkspaceConnectionPropertiesV2: &id481 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceConnectionPropertiesV2 ''
+    WorkspaceConnectionPropertiesV2BasicResource: &id482 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceConnectionPropertiesV2BasicResource ''
+    WorkspaceConnectionPropertiesV2BasicResourceArmPaginatedResult: &id483 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceConnectionPropertiesV2BasicResourceArmPaginatedResult ''
+    WorkspaceConnectionSharedAccessSignature: &id484 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceConnectionSharedAccessSignature ''
+    WorkspaceConnectionUsernamePassword: &id485 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceConnectionUsernamePassword ''
+    WorkspaceListResult: &id486 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceListResult ''
+    WorkspaceUpdateParameters: &id487 !!python/name:azure.ai.ml._restclient.v2022_10_01.models._models_py3.WorkspaceUpdateParameters ''
+  key_transformer: &id488 !!python/name:msrest.serialization.full_restapi_key_transformer ''
+  serialize_type:
+    '[]': !!python/object/apply:builtins.getattr
+    - *id009
+    - serialize_iter
+    base64: &id490 !!python/name:msrest.serialization.serialize_base64 ''
+    bytearray: &id491 !!python/name:msrest.serialization.serialize_bytearray ''
+    date: &id492 !!python/name:msrest.serialization.serialize_date ''
+    decimal: &id493 !!python/name:msrest.serialization.serialize_decimal ''
+    duration: &id494 !!python/name:msrest.serialization.serialize_duration ''
+    iso-8601: &id495 !!python/name:msrest.serialization.serialize_iso ''
+    long: &id496 !!python/name:msrest.serialization.serialize_long ''
+    object: !!python/object/apply:builtins.getattr
+    - *id009
+    - serialize_object
+    rfc-1123: &id497 !!python/name:msrest.serialization.serialize_rfc ''
+    time: &id498 !!python/name:msrest.serialization.serialize_time ''
+    unix-time: &id499 !!python/name:msrest.serialization.serialize_unix ''
+    '{}': !!python/object/apply:builtins.getattr
+    - *id009
+    - serialize_dict
+_settings: !!python/object:azure.ai.ml.entities._job.pipeline.pipeline_job_settings.PipelineJobSettings
+  _allowed_keys: {}
+  _init: false
+  _key_restriction: false
+  _logger: &id011 !!python/object/apply:logging.getLogger
+  - attr_dict
+  _source: YAML.JOB
+  continue_on_step_failure: false
+  default_compute: cpu-cluster
+  default_datastore: workspaceblobstore
+  force_rerun: null
+  on_finalize: null
+  on_init: null
+_status: Completed
+_type: pipeline
+component: !!python/object:azure.ai.ml.entities._component.pipeline_component.PipelineComponent
+  _Resource__source_path: null
+  _auto_increment_version: false
+  _base_path: c:\Users\CalvinPuah-Pernix\VSCodeSaves\DocAIMLOps\DocAI_MLOps\MLOps
+    YML
+  _creation_context: null
+  _display_name: prod_taxi_fare_run_43
+  _id: null
+  _inputs:
+    enable_monitoring: !!python/object:azure.ai.ml.entities._inputs_outputs.input.Input
+      _is_inferred_optional: false
+      _port_name: null
+      datastore: null
+      default: null
+      description: null
+      enum: null
+      max: null
+      min: null
+      mode: null
+      optional: null
+      path: null
+      path_on_compute: null
+      type: null
+    input: !!python/object:azure.ai.ml.entities._inputs_outputs.input.Input
+      _is_inferred_optional: false
+      _port_name: null
+      datastore: null
+      default: null
+      description: null
+      enum: null
+      max: null
+      min: null
+      mode: null
+      optional: null
+      path: null
+      path_on_compute: null
+      type: null
+    table_name: !!python/object:azure.ai.ml.entities._inputs_outputs.input.Input
+      _is_inferred_optional: false
+      _port_name: null
+      datastore: null
+      default: null
+      description: null
+      enum: null
+      max: null
+      min: null
+      mode: null
+      optional: null
+      path: null
+      path_on_compute: null
+      type: null
+  _intellectual_property: null
+  _is_anonymous: true
+  _is_deterministic: null
+  _job_sources:
+    YAML.JOB: 4
+  _job_types:
+    command: 4
+  _jobs:
+    evaluate_model: &id010 !!python/object:azure.ai.ml.entities._builders.command.Command
+      _Resource__source_path: ''
+      _allowed_keys: {}
+      _base_path: c:\Users\CalvinPuah-Pernix\VSCodeSaves\DocAIMLOps\DocAI_MLOps\MLOps
+        YML
+      _component: azureml_anonymous:9c4a7238-88ef-4611-bbbe-353d9193a04f
+      _creation_context: null
+      _distribution: null
+      _id: null
+      _identity: null
+      _init: false
+      _inputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.InputsAttrDict
+        dictitems:
+          model_input: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: ${{parent.jobs.train_model.outputs.model_output}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: ${{parent.jobs.train_model.outputs.model_output}}
+            _owner: *id010
+            _port_name: model_input
+            _type: null
+            _version: ''
+          model_name: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: taxi-model
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: taxi-model
+            _owner: *id010
+            _port_name: model_name
+            _type: null
+            _version: ''
+          test_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: ${{parent.jobs.prep_data.outputs.test_data}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: ${{parent.jobs.prep_data.outputs.test_data}}
+            _owner: *id010
+            _port_name: test_data
+            _type: null
+            _version: ''
+      _instance_id: 36a87e27-d5c3-49a6-91d9-28d3a666d7e6
+      _job_inputs:
+        model_input: ${{parent.jobs.train_model.outputs.model_output}}
+        model_name: taxi-model
+        test_data: ${{parent.jobs.prep_data.outputs.test_data}}
+      _job_outputs:
+        evaluation_output: ${{parent.outputs.evaluation_output}}
+      _key_restriction: false
+      _log_files: null
+      _logger: *id011
+      _name: evaluate_model
+      _outputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.OutputsAttrDict
+        dictitems:
+          evaluation_output: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeOutput
+            _attribute_map: {}
+            _binding_output: null
+            _data: ${{parent.outputs.evaluation_output}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: null
+            _original_data: ${{parent.outputs.evaluation_output}}
+            _owner: *id010
+            _port_name: evaluation_output
+            _type: null
+            _version: null
+      _parameters: {}
+      _print_as_yaml: false
+      _queue_settings: null
+      _referenced_control_flow_node_instance_id: null
+      _resources: null
+      _serialize: &id489 !!python/object:msrest.serialization.Serializer
+        client_side_validation: false
+        dependencies:
+          AKS: *id012
+          AKSSchema: *id013
+          AKSSchemaProperties: *id014
+          AccountKeyDatastoreCredentials: *id015
+          AccountKeyDatastoreSecrets: *id016
+          AksComputeSecrets: *id017
+          AksComputeSecretsProperties: *id018
+          AksNetworkingConfiguration: *id019
+          AllocationState: *id020
+          AmlCompute: *id021
+          AmlComputeNodeInformation: *id022
+          AmlComputeNodesInformation: *id023
+          AmlComputeProperties: *id024
+          AmlComputeSchema: *id025
+          AmlOperation: *id026
+          AmlOperationDisplay: *id027
+          AmlOperationListResult: *id028
+          AmlToken: *id029
+          AmlUserFeature: *id030
+          ApplicationSharingPolicy: *id031
+          AssetBase: *id032
+          AssetContainer: *id033
+          AssetJobInput: *id034
+          AssetJobOutput: *id035
+          AssetReferenceBase: *id036
+          AssignedUser: *id037
+          AutoForecastHorizon: *id038
+          AutoMLJob: *id039
+          AutoMLVertical: *id040
+          AutoNCrossValidations: *id041
+          AutoPauseProperties: *id042
+          AutoRebuildSetting: *id043
+          AutoScaleProperties: *id044
+          AutoSeasonality: *id045
+          AutoTargetLags: *id046
+          AutoTargetRollingWindowSize: *id047
+          Autosave: *id048
+          AzureBlobDatastore: *id049
+          AzureDataLakeGen1Datastore: *id050
+          AzureDataLakeGen2Datastore: *id051
+          AzureFileDatastore: *id052
+          BanditPolicy: *id053
+          BatchDeployment: *id054
+          BatchDeploymentProperties: *id055
+          BatchDeploymentTrackedResourceArmPaginatedResult: *id056
+          BatchEndpoint: *id057
+          BatchEndpointDefaults: *id058
+          BatchEndpointProperties: *id059
+          BatchEndpointTrackedResourceArmPaginatedResult: *id060
+          BatchLoggingLevel: *id061
+          BatchOutputAction: *id062
+          BatchRetrySettings: *id063
+          BayesianSamplingAlgorithm: *id064
+          BillingCurrency: *id065
+          BlockedTransformers: *id066
+          BuildContext: *id067
+          Caching: *id068
+          CertificateDatastoreCredentials: *id069
+          CertificateDatastoreSecrets: *id070
+          Classification: *id071
+          ClassificationModels: *id072
+          ClassificationMultilabelPrimaryMetrics: *id073
+          ClassificationPrimaryMetrics: *id074
+          ClassificationTrainingSettings: *id075
+          ClusterPurpose: *id076
+          ClusterUpdateParameters: *id077
+          CodeConfiguration: *id078
+          CodeContainer: *id079
+          CodeContainerProperties: *id080
+          CodeContainerResourceArmPaginatedResult: *id081
+          CodeVersion: *id082
+          CodeVersionProperties: *id083
+          CodeVersionResourceArmPaginatedResult: *id084
+          ColumnTransformer: *id085
+          CommandJob: *id086
+          CommandJobLimits: *id087
+          ComponentContainer: *id088
+          ComponentContainerProperties: *id089
+          ComponentContainerResourceArmPaginatedResult: *id090
+          ComponentVersion: *id091
+          ComponentVersionProperties: *id092
+          ComponentVersionResourceArmPaginatedResult: *id093
+          Compute: *id094
+          ComputeInstance: *id095
+          ComputeInstanceApplication: *id096
+          ComputeInstanceAuthorizationType: *id097
+          ComputeInstanceConnectivityEndpoints: *id098
+          ComputeInstanceContainer: *id099
+          ComputeInstanceCreatedBy: *id100
+          ComputeInstanceDataDisk: *id101
+          ComputeInstanceDataMount: *id102
+          ComputeInstanceEnvironmentInfo: *id103
+          ComputeInstanceLastOperation: *id104
+          ComputeInstanceProperties: *id105
+          ComputeInstanceSchema: *id106
+          ComputeInstanceSshSettings: *id107
+          ComputeInstanceState: *id108
+          ComputeInstanceVersion: *id109
+          ComputePowerAction: *id110
+          ComputeResource: *id111
+          ComputeResourceSchema: *id112
+          ComputeSchedules: *id113
+          ComputeSecrets: *id114
+          ComputeStartStopSchedule: *id115
+          ComputeType: *id116
+          ConnectionAuthType: *id117
+          ConnectionCategory: *id118
+          ContainerResourceRequirements: *id119
+          ContainerResourceSettings: *id120
+          ContainerType: *id121
+          CosmosDbSettings: *id122
+          CreatedByType: *id123
+          CredentialsType: *id124
+          CronTrigger: *id125
+          CustomForecastHorizon: *id126
+          CustomModelJobInput: *id127
+          CustomModelJobOutput: *id128
+          CustomNCrossValidations: *id129
+          CustomSeasonality: *id130
+          CustomTargetLags: *id131
+          CustomTargetRollingWindowSize: *id132
+          DataContainer: *id133
+          DataContainerProperties: *id134
+          DataContainerResourceArmPaginatedResult: *id135
+          DataFactory: *id136
+          DataLakeAnalytics: *id137
+          DataLakeAnalyticsSchema: *id138
+          DataLakeAnalyticsSchemaProperties: *id139
+          DataPathAssetReference: *id140
+          DataType: *id141
+          DataVersionBase: *id142
+          DataVersionBaseProperties: *id143
+          DataVersionBaseResourceArmPaginatedResult: *id144
+          Databricks: *id145
+          DatabricksComputeSecrets: *id146
+          DatabricksComputeSecretsProperties: *id147
+          DatabricksProperties: *id148
+          DatabricksSchema: *id149
+          Datastore: *id150
+          DatastoreCredentials: *id151
+          DatastoreProperties: *id152
+          DatastoreResourceArmPaginatedResult: *id153
+          DatastoreSecrets: *id154
+          DatastoreType: *id155
+          DefaultScaleSettings: *id156
+          DeploymentLogs: *id157
+          DeploymentLogsRequest: *id158
+          DeploymentProvisioningState: *id159
+          DeploymentResourceConfiguration: *id160
+          DiagnoseRequestProperties: *id161
+          DiagnoseResponseResult: *id162
+          DiagnoseResponseResultValue: *id163
+          DiagnoseResult: *id164
+          DiagnoseResultLevel: *id165
+          DiagnoseWorkspaceParameters: *id166
+          DistributionConfiguration: *id167
+          DistributionType: *id168
+          EarlyTerminationPolicy: *id169
+          EarlyTerminationPolicyType: *id170
+          EgressPublicNetworkAccessType: *id171
+          EncryptionKeyVaultProperties: *id172
+          EncryptionProperty: *id173
+          EncryptionStatus: *id174
+          EndpointAuthKeys: *id175
+          EndpointAuthMode: *id176
+          EndpointAuthToken: *id177
+          EndpointComputeType: *id178
+          EndpointDeploymentPropertiesBase: *id179
+          EndpointPropertiesBase: *id180
+          EndpointProvisioningState: *id181
+          EndpointScheduleAction: *id182
+          EnvironmentContainer: *id183
+          EnvironmentContainerProperties: *id184
+          EnvironmentContainerResourceArmPaginatedResult: *id185
+          EnvironmentType: *id186
+          EnvironmentVersion: *id187
+          EnvironmentVersionProperties: *id188
+          EnvironmentVersionResourceArmPaginatedResult: *id189
+          ErrorAdditionalInfo: *id190
+          ErrorDetail: *id191
+          ErrorResponse: *id192
+          EstimatedVMPrice: *id193
+          EstimatedVMPrices: *id194
+          ExternalFQDNResponse: *id195
+          FQDNEndpoint: *id196
+          FQDNEndpointDetail: *id197
+          FQDNEndpoints: *id198
+          FQDNEndpointsProperties: *id199
+          FeatureLags: *id200
+          FeaturizationMode: *id201
+          FeaturizationSettings: *id202
+          FlavorData: *id203
+          ForecastHorizon: *id204
+          ForecastHorizonMode: *id205
+          Forecasting: *id206
+          ForecastingModels: *id207
+          ForecastingPrimaryMetrics: *id208
+          ForecastingSettings: *id209
+          ForecastingTrainingSettings: *id210
+          Goal: *id211
+          GridSamplingAlgorithm: *id212
+          HDInsight: *id213
+          HDInsightProperties: *id214
+          HDInsightSchema: *id215
+          IdAssetReference: *id216
+          IdentityConfiguration: *id217
+          IdentityConfigurationType: *id218
+          IdentityForCmk: *id219
+          ImageClassification: *id220
+          ImageClassificationBase: *id221
+          ImageClassificationMultilabel: *id222
+          ImageInstanceSegmentation: *id223
+          ImageLimitSettings: *id224
+          ImageModelDistributionSettings: *id225
+          ImageModelDistributionSettingsClassification: *id226
+          ImageModelDistributionSettingsObjectDetection: *id227
+          ImageModelSettings: *id228
+          ImageModelSettingsClassification: *id229
+          ImageModelSettingsObjectDetection: *id230
+          ImageObjectDetection: *id231
+          ImageObjectDetectionBase: *id232
+          ImageSweepSettings: *id233
+          ImageVertical: *id234
+          InferenceContainerProperties: *id235
+          InputDeliveryMode: *id236
+          InstanceSegmentationPrimaryMetrics: *id237
+          InstanceTypeSchema: *id238
+          InstanceTypeSchemaResources: *id239
+          JobBase: *id240
+          JobBaseProperties: *id241
+          JobBaseResourceArmPaginatedResult: *id242
+          JobInput: *id243
+          JobInputType: *id244
+          JobLimits: *id245
+          JobLimitsType: *id246
+          JobOutput: *id247
+          JobOutputType: *id248
+          JobResourceConfiguration: *id249
+          JobScheduleAction: *id250
+          JobService: *id251
+          JobStatus: *id252
+          JobType: *id253
+          KeyType: *id254
+          Kubernetes: *id255
+          KubernetesOnlineDeployment: *id256
+          KubernetesProperties: *id257
+          KubernetesSchema: *id258
+          LearningRateScheduler: *id259
+          ListAmlUserFeatureResult: *id260
+          ListNotebookKeysResult: *id261
+          ListStorageAccountKeysResult: *id262
+          ListUsagesResult: *id263
+          ListViewType: *id264
+          ListWorkspaceKeysResult: *id265
+          ListWorkspaceQuotas: *id266
+          LiteralJobInput: *id267
+          LoadBalancerType: *id268
+          LogVerbosity: *id269
+          MLFlowModelJobInput: *id270
+          MLFlowModelJobOutput: *id271
+          MLTableData: *id272
+          MLTableJobInput: *id273
+          MLTableJobOutput: *id274
+          ManagedIdentity: *id275
+          ManagedIdentityAuthTypeWorkspaceConnectionProperties: *id276
+          ManagedOnlineDeployment: *id277
+          ManagedServiceIdentity: *id278
+          ManagedServiceIdentityType: *id279
+          MedianStoppingPolicy: *id280
+          ModelContainer: *id281
+          ModelContainerProperties: *id282
+          ModelContainerResourceArmPaginatedResult: *id283
+          ModelSize: *id284
+          ModelVersion: *id285
+          ModelVersionProperties: *id286
+          ModelVersionResourceArmPaginatedResult: *id287
+          MountAction: *id288
+          MountState: *id289
+          Mpi: *id290
+          NCrossValidations: *id291
+          NCrossValidationsMode: *id292
+          Network: *id293
+          NlpVertical: *id294
+          NlpVerticalFeaturizationSettings: *id295
+          NlpVerticalLimitSettings: *id296
+          NodeState: *id297
+          NodeStateCounts: *id298
+          NoneAuthTypeWorkspaceConnectionProperties: *id299
+          NoneDatastoreCredentials: *id300
+          NotebookAccessTokenResult: *id301
+          NotebookPreparationError: *id302
+          NotebookResourceInfo: *id303
+          ObjectDetectionPrimaryMetrics: *id304
+          Objective: *id305
+          OnlineDeployment: *id306
+          OnlineDeploymentProperties: *id307
+          OnlineDeploymentTrackedResourceArmPaginatedResult: *id308
+          OnlineEndpoint: *id309
+          OnlineEndpointProperties: *id310
+          OnlineEndpointTrackedResourceArmPaginatedResult: *id311
+          OnlineRequestSettings: *id312
+          OnlineScaleSettings: *id313
+          OperatingSystemType: *id314
+          OperationName: *id315
+          OperationStatus: *id316
+          OperationTrigger: *id317
+          OrderString: *id318
+          OsType: *id319
+          OutputDeliveryMode: *id320
+          OutputPathAssetReference: *id321
+          PATAuthTypeWorkspaceConnectionProperties: *id322
+          PaginatedComputeResourcesList: *id323
+          PartialBatchDeployment: *id324
+          PartialBatchDeploymentPartialMinimalTrackedResourceWithProperties: *id325
+          PartialManagedServiceIdentity: *id326
+          PartialMinimalTrackedResource: *id327
+          PartialMinimalTrackedResourceWithIdentity: *id328
+          PartialMinimalTrackedResourceWithSku: *id329
+          PartialSku: *id330
+          Password: *id331
+          PersonalComputeInstanceSettings: *id332
+          PipelineJob: *id333
+          PrivateEndpoint: *id334
+          PrivateEndpointConnection: *id335
+          PrivateEndpointConnectionListResult: *id336
+          PrivateEndpointConnectionProvisioningState: *id337
+          PrivateEndpointServiceConnectionStatus: *id338
+          PrivateLinkResource: *id339
+          PrivateLinkResourceListResult: *id340
+          PrivateLinkServiceConnectionState: *id341
+          ProbeSettings: *id342
+          ProvisioningState: *id343
+          ProvisioningStatus: *id344
+          PublicNetworkAccess: *id345
+          PublicNetworkAccessType: *id346
+          PyTorch: *id347
+          QuotaBaseProperties: *id348
+          QuotaUnit: *id349
+          QuotaUpdateParameters: *id350
+          RandomSamplingAlgorithm: *id351
+          RandomSamplingAlgorithmRule: *id352
+          RecurrenceFrequency: *id353
+          RecurrenceSchedule: *id354
+          RecurrenceTrigger: *id355
+          ReferenceType: *id356
+          RegenerateEndpointKeysRequest: *id357
+          RegistryListCredentialsResult: *id358
+          Regression: *id359
+          RegressionModels: *id360
+          RegressionPrimaryMetrics: *id361
+          RegressionTrainingSettings: *id362
+          RemoteLoginPortPublicAccess: *id363
+          Resource: *id364
+          ResourceBase: *id365
+          ResourceConfiguration: *id366
+          ResourceId: *id367
+          ResourceName: *id368
+          ResourceQuota: *id369
+          Route: *id370
+          SASAuthTypeWorkspaceConnectionProperties: *id371
+          SamplingAlgorithm: *id372
+          SamplingAlgorithmType: *id373
+          SasDatastoreCredentials: *id374
+          SasDatastoreSecrets: *id375
+          ScaleSettings: *id376
+          ScaleSettingsInformation: *id377
+          ScaleType: *id378
+          Schedule: *id379
+          ScheduleActionBase: *id380
+          ScheduleActionType: *id381
+          ScheduleBase: *id382
+          ScheduleListViewType: *id383
+          ScheduleProperties: *id384
+          ScheduleProvisioningState: *id385
+          ScheduleProvisioningStatus: *id386
+          ScheduleResourceArmPaginatedResult: *id387
+          ScheduleStatus: *id388
+          ScriptReference: *id389
+          ScriptsToExecute: *id390
+          Seasonality: *id391
+          SeasonalityMode: *id392
+          SecretsType: *id393
+          ServiceDataAccessAuthIdentity: *id394
+          ServiceManagedResourcesSettings: *id395
+          ServicePrincipalDatastoreCredentials: *id396
+          ServicePrincipalDatastoreSecrets: *id397
+          SetupScripts: *id398
+          SharedPrivateLinkResource: *id399
+          ShortSeriesHandlingConfiguration: *id400
+          Sku: *id401
+          SkuCapacity: *id402
+          SkuResource: *id403
+          SkuResourceArmPaginatedResult: *id404
+          SkuScaleType: *id405
+          SkuSetting: *id406
+          SkuTier: *id407
+          SourceType: *id408
+          SshPublicAccess: *id409
+          SslConfigStatus: *id410
+          SslConfiguration: *id411
+          StackEnsembleSettings: *id412
+          StackMetaLearnerType: *id413
+          Status: *id414
+          StochasticOptimizer: *id415
+          StorageAccountType: *id416
+          SweepJob: *id417
+          SweepJobLimits: *id418
+          SynapseSpark: *id419
+          SynapseSparkProperties: *id420
+          SystemData: *id421
+          SystemService: *id422
+          TableVertical: *id423
+          TableVerticalFeaturizationSettings: *id424
+          TableVerticalLimitSettings: *id425
+          TargetAggregationFunction: *id426
+          TargetLags: *id427
+          TargetLagsMode: *id428
+          TargetRollingWindowSize: *id429
+          TargetRollingWindowSizeMode: *id430
+          TargetUtilizationScaleSettings: *id431
+          TaskType: *id432
+          TensorFlow: *id433
+          TextClassification: *id434
+          TextClassificationMultilabel: *id435
+          TextNer: *id436
+          TrackedResource: *id437
+          TrainingSettings: *id438
+          TrialComponent: *id439
+          TriggerBase: *id440
+          TriggerType: *id441
+          TritonModelJobInput: *id442
+          TritonModelJobOutput: *id443
+          TruncationSelectionPolicy: *id444
+          UnderlyingResourceAction: *id445
+          UnitOfMeasure: *id446
+          UpdateWorkspaceQuotas: *id447
+          UpdateWorkspaceQuotasResult: *id448
+          UriFileDataVersion: *id449
+          UriFileJobInput: *id450
+          UriFileJobOutput: *id451
+          UriFolderDataVersion: *id452
+          UriFolderJobInput: *id453
+          UriFolderJobOutput: *id454
+          Usage: *id455
+          UsageName: *id456
+          UsageUnit: *id457
+          UseStl: *id458
+          UserAccountCredentials: *id459
+          UserAssignedIdentity: *id460
+          UserIdentity: *id461
+          UsernamePasswordAuthTypeWorkspaceConnectionProperties: *id462
+          VMPriceOSType: *id463
+          VMTier: *id464
+          ValidationMetricType: *id465
+          ValueFormat: *id466
+          VirtualMachine: *id467
+          VirtualMachineImage: *id468
+          VirtualMachineSchema: *id469
+          VirtualMachineSchemaProperties: *id470
+          VirtualMachineSecrets: *id471
+          VirtualMachineSecretsSchema: *id472
+          VirtualMachineSize: *id473
+          VirtualMachineSizeListResult: *id474
+          VirtualMachineSshCredentials: *id475
+          VmPriority: *id476
+          WeekDay: *id477
+          Workspace: *id478
+          WorkspaceConnectionManagedIdentity: *id479
+          WorkspaceConnectionPersonalAccessToken: *id480
+          WorkspaceConnectionPropertiesV2: *id481
+          WorkspaceConnectionPropertiesV2BasicResource: *id482
+          WorkspaceConnectionPropertiesV2BasicResourceArmPaginatedResult: *id483
+          WorkspaceConnectionSharedAccessSignature: *id484
+          WorkspaceConnectionUsernamePassword: *id485
+          WorkspaceListResult: *id486
+          WorkspaceUpdateParameters: *id487
+        key_transformer: *id488
+        serialize_type:
+          '[]': !!python/object/apply:builtins.getattr
+          - *id489
+          - serialize_iter
+          base64: *id490
+          bytearray: *id491
+          date: *id492
+          decimal: *id493
+          duration: *id494
+          iso-8601: *id495
+          long: *id496
+          object: !!python/object/apply:builtins.getattr
+          - *id489
+          - serialize_object
+          rfc-1123: *id497
+          time: *id498
+          unix-time: *id499
+          '{}': !!python/object/apply:builtins.getattr
+          - *id489
+          - serialize_dict
+      _services: null
+      _source: YAML.JOB
+      _status: null
+      _swept: false
+      _type: command
+      _validate_required_input_not_provided: true
+      comment: null
+      compute: null
+      description: null
+      display_name: evaluate-model
+      environment: null
+      environment_variables: {}
+      experiment_name: null
+      kwargs:
+        services: null
+      limits: null
+      properties: {}
+      tags: {}
+    prep_data: &id500 !!python/object:azure.ai.ml.entities._builders.command.Command
+      _Resource__source_path: ''
+      _allowed_keys: {}
+      _base_path: c:\Users\CalvinPuah-Pernix\VSCodeSaves\DocAIMLOps\DocAI_MLOps\MLOps
+        YML
+      _component: azureml_anonymous:ceaebc0c-3d8b-4d78-8d8c-0b49728e4618
+      _creation_context: null
+      _distribution: null
+      _id: null
+      _identity: null
+      _init: false
+      _inputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.InputsAttrDict
+        dictitems:
+          enable_monitoring: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: ${{parent.inputs.enable_monitoring}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: ${{parent.inputs.enable_monitoring}}
+            _owner: *id500
+            _port_name: enable_monitoring
+            _type: null
+            _version: ''
+          raw_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: ${{parent.inputs.input}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: ${{parent.inputs.input}}
+            _owner: *id500
+            _port_name: raw_data
+            _type: null
+            _version: ''
+          table_name: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: ${{parent.inputs.table_name}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: ${{parent.inputs.table_name}}
+            _owner: *id500
+            _port_name: table_name
+            _type: null
+            _version: ''
+      _instance_id: 34f6560b-aa42-4e17-a604-4b673f8b5a6a
+      _job_inputs:
+        enable_monitoring: ${{parent.inputs.enable_monitoring}}
+        raw_data: ${{parent.inputs.input}}
+        table_name: ${{parent.inputs.table_name}}
+      _job_outputs:
+        test_data: ${{parent.outputs.test_data}}
+        train_data: ${{parent.outputs.train_data}}
+        val_data: ${{parent.outputs.val_data}}
+      _key_restriction: false
+      _log_files: null
+      _logger: *id011
+      _name: prep_data
+      _outputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.OutputsAttrDict
+        dictitems:
+          test_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeOutput
+            _attribute_map: {}
+            _binding_output: null
+            _data: ${{parent.outputs.test_data}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: null
+            _original_data: ${{parent.outputs.test_data}}
+            _owner: *id500
+            _port_name: test_data
+            _type: null
+            _version: null
+          train_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeOutput
+            _attribute_map: {}
+            _binding_output: null
+            _data: ${{parent.outputs.train_data}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: null
+            _original_data: ${{parent.outputs.train_data}}
+            _owner: *id500
+            _port_name: train_data
+            _type: null
+            _version: null
+          val_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeOutput
+            _attribute_map: {}
+            _binding_output: null
+            _data: ${{parent.outputs.val_data}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: null
+            _original_data: ${{parent.outputs.val_data}}
+            _owner: *id500
+            _port_name: val_data
+            _type: null
+            _version: null
+      _parameters: {}
+      _print_as_yaml: false
+      _queue_settings: null
+      _referenced_control_flow_node_instance_id: null
+      _resources: null
+      _serialize: &id501 !!python/object:msrest.serialization.Serializer
+        client_side_validation: false
+        dependencies:
+          AKS: *id012
+          AKSSchema: *id013
+          AKSSchemaProperties: *id014
+          AccountKeyDatastoreCredentials: *id015
+          AccountKeyDatastoreSecrets: *id016
+          AksComputeSecrets: *id017
+          AksComputeSecretsProperties: *id018
+          AksNetworkingConfiguration: *id019
+          AllocationState: *id020
+          AmlCompute: *id021
+          AmlComputeNodeInformation: *id022
+          AmlComputeNodesInformation: *id023
+          AmlComputeProperties: *id024
+          AmlComputeSchema: *id025
+          AmlOperation: *id026
+          AmlOperationDisplay: *id027
+          AmlOperationListResult: *id028
+          AmlToken: *id029
+          AmlUserFeature: *id030
+          ApplicationSharingPolicy: *id031
+          AssetBase: *id032
+          AssetContainer: *id033
+          AssetJobInput: *id034
+          AssetJobOutput: *id035
+          AssetReferenceBase: *id036
+          AssignedUser: *id037
+          AutoForecastHorizon: *id038
+          AutoMLJob: *id039
+          AutoMLVertical: *id040
+          AutoNCrossValidations: *id041
+          AutoPauseProperties: *id042
+          AutoRebuildSetting: *id043
+          AutoScaleProperties: *id044
+          AutoSeasonality: *id045
+          AutoTargetLags: *id046
+          AutoTargetRollingWindowSize: *id047
+          Autosave: *id048
+          AzureBlobDatastore: *id049
+          AzureDataLakeGen1Datastore: *id050
+          AzureDataLakeGen2Datastore: *id051
+          AzureFileDatastore: *id052
+          BanditPolicy: *id053
+          BatchDeployment: *id054
+          BatchDeploymentProperties: *id055
+          BatchDeploymentTrackedResourceArmPaginatedResult: *id056
+          BatchEndpoint: *id057
+          BatchEndpointDefaults: *id058
+          BatchEndpointProperties: *id059
+          BatchEndpointTrackedResourceArmPaginatedResult: *id060
+          BatchLoggingLevel: *id061
+          BatchOutputAction: *id062
+          BatchRetrySettings: *id063
+          BayesianSamplingAlgorithm: *id064
+          BillingCurrency: *id065
+          BlockedTransformers: *id066
+          BuildContext: *id067
+          Caching: *id068
+          CertificateDatastoreCredentials: *id069
+          CertificateDatastoreSecrets: *id070
+          Classification: *id071
+          ClassificationModels: *id072
+          ClassificationMultilabelPrimaryMetrics: *id073
+          ClassificationPrimaryMetrics: *id074
+          ClassificationTrainingSettings: *id075
+          ClusterPurpose: *id076
+          ClusterUpdateParameters: *id077
+          CodeConfiguration: *id078
+          CodeContainer: *id079
+          CodeContainerProperties: *id080
+          CodeContainerResourceArmPaginatedResult: *id081
+          CodeVersion: *id082
+          CodeVersionProperties: *id083
+          CodeVersionResourceArmPaginatedResult: *id084
+          ColumnTransformer: *id085
+          CommandJob: *id086
+          CommandJobLimits: *id087
+          ComponentContainer: *id088
+          ComponentContainerProperties: *id089
+          ComponentContainerResourceArmPaginatedResult: *id090
+          ComponentVersion: *id091
+          ComponentVersionProperties: *id092
+          ComponentVersionResourceArmPaginatedResult: *id093
+          Compute: *id094
+          ComputeInstance: *id095
+          ComputeInstanceApplication: *id096
+          ComputeInstanceAuthorizationType: *id097
+          ComputeInstanceConnectivityEndpoints: *id098
+          ComputeInstanceContainer: *id099
+          ComputeInstanceCreatedBy: *id100
+          ComputeInstanceDataDisk: *id101
+          ComputeInstanceDataMount: *id102
+          ComputeInstanceEnvironmentInfo: *id103
+          ComputeInstanceLastOperation: *id104
+          ComputeInstanceProperties: *id105
+          ComputeInstanceSchema: *id106
+          ComputeInstanceSshSettings: *id107
+          ComputeInstanceState: *id108
+          ComputeInstanceVersion: *id109
+          ComputePowerAction: *id110
+          ComputeResource: *id111
+          ComputeResourceSchema: *id112
+          ComputeSchedules: *id113
+          ComputeSecrets: *id114
+          ComputeStartStopSchedule: *id115
+          ComputeType: *id116
+          ConnectionAuthType: *id117
+          ConnectionCategory: *id118
+          ContainerResourceRequirements: *id119
+          ContainerResourceSettings: *id120
+          ContainerType: *id121
+          CosmosDbSettings: *id122
+          CreatedByType: *id123
+          CredentialsType: *id124
+          CronTrigger: *id125
+          CustomForecastHorizon: *id126
+          CustomModelJobInput: *id127
+          CustomModelJobOutput: *id128
+          CustomNCrossValidations: *id129
+          CustomSeasonality: *id130
+          CustomTargetLags: *id131
+          CustomTargetRollingWindowSize: *id132
+          DataContainer: *id133
+          DataContainerProperties: *id134
+          DataContainerResourceArmPaginatedResult: *id135
+          DataFactory: *id136
+          DataLakeAnalytics: *id137
+          DataLakeAnalyticsSchema: *id138
+          DataLakeAnalyticsSchemaProperties: *id139
+          DataPathAssetReference: *id140
+          DataType: *id141
+          DataVersionBase: *id142
+          DataVersionBaseProperties: *id143
+          DataVersionBaseResourceArmPaginatedResult: *id144
+          Databricks: *id145
+          DatabricksComputeSecrets: *id146
+          DatabricksComputeSecretsProperties: *id147
+          DatabricksProperties: *id148
+          DatabricksSchema: *id149
+          Datastore: *id150
+          DatastoreCredentials: *id151
+          DatastoreProperties: *id152
+          DatastoreResourceArmPaginatedResult: *id153
+          DatastoreSecrets: *id154
+          DatastoreType: *id155
+          DefaultScaleSettings: *id156
+          DeploymentLogs: *id157
+          DeploymentLogsRequest: *id158
+          DeploymentProvisioningState: *id159
+          DeploymentResourceConfiguration: *id160
+          DiagnoseRequestProperties: *id161
+          DiagnoseResponseResult: *id162
+          DiagnoseResponseResultValue: *id163
+          DiagnoseResult: *id164
+          DiagnoseResultLevel: *id165
+          DiagnoseWorkspaceParameters: *id166
+          DistributionConfiguration: *id167
+          DistributionType: *id168
+          EarlyTerminationPolicy: *id169
+          EarlyTerminationPolicyType: *id170
+          EgressPublicNetworkAccessType: *id171
+          EncryptionKeyVaultProperties: *id172
+          EncryptionProperty: *id173
+          EncryptionStatus: *id174
+          EndpointAuthKeys: *id175
+          EndpointAuthMode: *id176
+          EndpointAuthToken: *id177
+          EndpointComputeType: *id178
+          EndpointDeploymentPropertiesBase: *id179
+          EndpointPropertiesBase: *id180
+          EndpointProvisioningState: *id181
+          EndpointScheduleAction: *id182
+          EnvironmentContainer: *id183
+          EnvironmentContainerProperties: *id184
+          EnvironmentContainerResourceArmPaginatedResult: *id185
+          EnvironmentType: *id186
+          EnvironmentVersion: *id187
+          EnvironmentVersionProperties: *id188
+          EnvironmentVersionResourceArmPaginatedResult: *id189
+          ErrorAdditionalInfo: *id190
+          ErrorDetail: *id191
+          ErrorResponse: *id192
+          EstimatedVMPrice: *id193
+          EstimatedVMPrices: *id194
+          ExternalFQDNResponse: *id195
+          FQDNEndpoint: *id196
+          FQDNEndpointDetail: *id197
+          FQDNEndpoints: *id198
+          FQDNEndpointsProperties: *id199
+          FeatureLags: *id200
+          FeaturizationMode: *id201
+          FeaturizationSettings: *id202
+          FlavorData: *id203
+          ForecastHorizon: *id204
+          ForecastHorizonMode: *id205
+          Forecasting: *id206
+          ForecastingModels: *id207
+          ForecastingPrimaryMetrics: *id208
+          ForecastingSettings: *id209
+          ForecastingTrainingSettings: *id210
+          Goal: *id211
+          GridSamplingAlgorithm: *id212
+          HDInsight: *id213
+          HDInsightProperties: *id214
+          HDInsightSchema: *id215
+          IdAssetReference: *id216
+          IdentityConfiguration: *id217
+          IdentityConfigurationType: *id218
+          IdentityForCmk: *id219
+          ImageClassification: *id220
+          ImageClassificationBase: *id221
+          ImageClassificationMultilabel: *id222
+          ImageInstanceSegmentation: *id223
+          ImageLimitSettings: *id224
+          ImageModelDistributionSettings: *id225
+          ImageModelDistributionSettingsClassification: *id226
+          ImageModelDistributionSettingsObjectDetection: *id227
+          ImageModelSettings: *id228
+          ImageModelSettingsClassification: *id229
+          ImageModelSettingsObjectDetection: *id230
+          ImageObjectDetection: *id231
+          ImageObjectDetectionBase: *id232
+          ImageSweepSettings: *id233
+          ImageVertical: *id234
+          InferenceContainerProperties: *id235
+          InputDeliveryMode: *id236
+          InstanceSegmentationPrimaryMetrics: *id237
+          InstanceTypeSchema: *id238
+          InstanceTypeSchemaResources: *id239
+          JobBase: *id240
+          JobBaseProperties: *id241
+          JobBaseResourceArmPaginatedResult: *id242
+          JobInput: *id243
+          JobInputType: *id244
+          JobLimits: *id245
+          JobLimitsType: *id246
+          JobOutput: *id247
+          JobOutputType: *id248
+          JobResourceConfiguration: *id249
+          JobScheduleAction: *id250
+          JobService: *id251
+          JobStatus: *id252
+          JobType: *id253
+          KeyType: *id254
+          Kubernetes: *id255
+          KubernetesOnlineDeployment: *id256
+          KubernetesProperties: *id257
+          KubernetesSchema: *id258
+          LearningRateScheduler: *id259
+          ListAmlUserFeatureResult: *id260
+          ListNotebookKeysResult: *id261
+          ListStorageAccountKeysResult: *id262
+          ListUsagesResult: *id263
+          ListViewType: *id264
+          ListWorkspaceKeysResult: *id265
+          ListWorkspaceQuotas: *id266
+          LiteralJobInput: *id267
+          LoadBalancerType: *id268
+          LogVerbosity: *id269
+          MLFlowModelJobInput: *id270
+          MLFlowModelJobOutput: *id271
+          MLTableData: *id272
+          MLTableJobInput: *id273
+          MLTableJobOutput: *id274
+          ManagedIdentity: *id275
+          ManagedIdentityAuthTypeWorkspaceConnectionProperties: *id276
+          ManagedOnlineDeployment: *id277
+          ManagedServiceIdentity: *id278
+          ManagedServiceIdentityType: *id279
+          MedianStoppingPolicy: *id280
+          ModelContainer: *id281
+          ModelContainerProperties: *id282
+          ModelContainerResourceArmPaginatedResult: *id283
+          ModelSize: *id284
+          ModelVersion: *id285
+          ModelVersionProperties: *id286
+          ModelVersionResourceArmPaginatedResult: *id287
+          MountAction: *id288
+          MountState: *id289
+          Mpi: *id290
+          NCrossValidations: *id291
+          NCrossValidationsMode: *id292
+          Network: *id293
+          NlpVertical: *id294
+          NlpVerticalFeaturizationSettings: *id295
+          NlpVerticalLimitSettings: *id296
+          NodeState: *id297
+          NodeStateCounts: *id298
+          NoneAuthTypeWorkspaceConnectionProperties: *id299
+          NoneDatastoreCredentials: *id300
+          NotebookAccessTokenResult: *id301
+          NotebookPreparationError: *id302
+          NotebookResourceInfo: *id303
+          ObjectDetectionPrimaryMetrics: *id304
+          Objective: *id305
+          OnlineDeployment: *id306
+          OnlineDeploymentProperties: *id307
+          OnlineDeploymentTrackedResourceArmPaginatedResult: *id308
+          OnlineEndpoint: *id309
+          OnlineEndpointProperties: *id310
+          OnlineEndpointTrackedResourceArmPaginatedResult: *id311
+          OnlineRequestSettings: *id312
+          OnlineScaleSettings: *id313
+          OperatingSystemType: *id314
+          OperationName: *id315
+          OperationStatus: *id316
+          OperationTrigger: *id317
+          OrderString: *id318
+          OsType: *id319
+          OutputDeliveryMode: *id320
+          OutputPathAssetReference: *id321
+          PATAuthTypeWorkspaceConnectionProperties: *id322
+          PaginatedComputeResourcesList: *id323
+          PartialBatchDeployment: *id324
+          PartialBatchDeploymentPartialMinimalTrackedResourceWithProperties: *id325
+          PartialManagedServiceIdentity: *id326
+          PartialMinimalTrackedResource: *id327
+          PartialMinimalTrackedResourceWithIdentity: *id328
+          PartialMinimalTrackedResourceWithSku: *id329
+          PartialSku: *id330
+          Password: *id331
+          PersonalComputeInstanceSettings: *id332
+          PipelineJob: *id333
+          PrivateEndpoint: *id334
+          PrivateEndpointConnection: *id335
+          PrivateEndpointConnectionListResult: *id336
+          PrivateEndpointConnectionProvisioningState: *id337
+          PrivateEndpointServiceConnectionStatus: *id338
+          PrivateLinkResource: *id339
+          PrivateLinkResourceListResult: *id340
+          PrivateLinkServiceConnectionState: *id341
+          ProbeSettings: *id342
+          ProvisioningState: *id343
+          ProvisioningStatus: *id344
+          PublicNetworkAccess: *id345
+          PublicNetworkAccessType: *id346
+          PyTorch: *id347
+          QuotaBaseProperties: *id348
+          QuotaUnit: *id349
+          QuotaUpdateParameters: *id350
+          RandomSamplingAlgorithm: *id351
+          RandomSamplingAlgorithmRule: *id352
+          RecurrenceFrequency: *id353
+          RecurrenceSchedule: *id354
+          RecurrenceTrigger: *id355
+          ReferenceType: *id356
+          RegenerateEndpointKeysRequest: *id357
+          RegistryListCredentialsResult: *id358
+          Regression: *id359
+          RegressionModels: *id360
+          RegressionPrimaryMetrics: *id361
+          RegressionTrainingSettings: *id362
+          RemoteLoginPortPublicAccess: *id363
+          Resource: *id364
+          ResourceBase: *id365
+          ResourceConfiguration: *id366
+          ResourceId: *id367
+          ResourceName: *id368
+          ResourceQuota: *id369
+          Route: *id370
+          SASAuthTypeWorkspaceConnectionProperties: *id371
+          SamplingAlgorithm: *id372
+          SamplingAlgorithmType: *id373
+          SasDatastoreCredentials: *id374
+          SasDatastoreSecrets: *id375
+          ScaleSettings: *id376
+          ScaleSettingsInformation: *id377
+          ScaleType: *id378
+          Schedule: *id379
+          ScheduleActionBase: *id380
+          ScheduleActionType: *id381
+          ScheduleBase: *id382
+          ScheduleListViewType: *id383
+          ScheduleProperties: *id384
+          ScheduleProvisioningState: *id385
+          ScheduleProvisioningStatus: *id386
+          ScheduleResourceArmPaginatedResult: *id387
+          ScheduleStatus: *id388
+          ScriptReference: *id389
+          ScriptsToExecute: *id390
+          Seasonality: *id391
+          SeasonalityMode: *id392
+          SecretsType: *id393
+          ServiceDataAccessAuthIdentity: *id394
+          ServiceManagedResourcesSettings: *id395
+          ServicePrincipalDatastoreCredentials: *id396
+          ServicePrincipalDatastoreSecrets: *id397
+          SetupScripts: *id398
+          SharedPrivateLinkResource: *id399
+          ShortSeriesHandlingConfiguration: *id400
+          Sku: *id401
+          SkuCapacity: *id402
+          SkuResource: *id403
+          SkuResourceArmPaginatedResult: *id404
+          SkuScaleType: *id405
+          SkuSetting: *id406
+          SkuTier: *id407
+          SourceType: *id408
+          SshPublicAccess: *id409
+          SslConfigStatus: *id410
+          SslConfiguration: *id411
+          StackEnsembleSettings: *id412
+          StackMetaLearnerType: *id413
+          Status: *id414
+          StochasticOptimizer: *id415
+          StorageAccountType: *id416
+          SweepJob: *id417
+          SweepJobLimits: *id418
+          SynapseSpark: *id419
+          SynapseSparkProperties: *id420
+          SystemData: *id421
+          SystemService: *id422
+          TableVertical: *id423
+          TableVerticalFeaturizationSettings: *id424
+          TableVerticalLimitSettings: *id425
+          TargetAggregationFunction: *id426
+          TargetLags: *id427
+          TargetLagsMode: *id428
+          TargetRollingWindowSize: *id429
+          TargetRollingWindowSizeMode: *id430
+          TargetUtilizationScaleSettings: *id431
+          TaskType: *id432
+          TensorFlow: *id433
+          TextClassification: *id434
+          TextClassificationMultilabel: *id435
+          TextNer: *id436
+          TrackedResource: *id437
+          TrainingSettings: *id438
+          TrialComponent: *id439
+          TriggerBase: *id440
+          TriggerType: *id441
+          TritonModelJobInput: *id442
+          TritonModelJobOutput: *id443
+          TruncationSelectionPolicy: *id444
+          UnderlyingResourceAction: *id445
+          UnitOfMeasure: *id446
+          UpdateWorkspaceQuotas: *id447
+          UpdateWorkspaceQuotasResult: *id448
+          UriFileDataVersion: *id449
+          UriFileJobInput: *id450
+          UriFileJobOutput: *id451
+          UriFolderDataVersion: *id452
+          UriFolderJobInput: *id453
+          UriFolderJobOutput: *id454
+          Usage: *id455
+          UsageName: *id456
+          UsageUnit: *id457
+          UseStl: *id458
+          UserAccountCredentials: *id459
+          UserAssignedIdentity: *id460
+          UserIdentity: *id461
+          UsernamePasswordAuthTypeWorkspaceConnectionProperties: *id462
+          VMPriceOSType: *id463
+          VMTier: *id464
+          ValidationMetricType: *id465
+          ValueFormat: *id466
+          VirtualMachine: *id467
+          VirtualMachineImage: *id468
+          VirtualMachineSchema: *id469
+          VirtualMachineSchemaProperties: *id470
+          VirtualMachineSecrets: *id471
+          VirtualMachineSecretsSchema: *id472
+          VirtualMachineSize: *id473
+          VirtualMachineSizeListResult: *id474
+          VirtualMachineSshCredentials: *id475
+          VmPriority: *id476
+          WeekDay: *id477
+          Workspace: *id478
+          WorkspaceConnectionManagedIdentity: *id479
+          WorkspaceConnectionPersonalAccessToken: *id480
+          WorkspaceConnectionPropertiesV2: *id481
+          WorkspaceConnectionPropertiesV2BasicResource: *id482
+          WorkspaceConnectionPropertiesV2BasicResourceArmPaginatedResult: *id483
+          WorkspaceConnectionSharedAccessSignature: *id484
+          WorkspaceConnectionUsernamePassword: *id485
+          WorkspaceListResult: *id486
+          WorkspaceUpdateParameters: *id487
+        key_transformer: *id488
+        serialize_type:
+          '[]': !!python/object/apply:builtins.getattr
+          - *id501
+          - serialize_iter
+          base64: *id490
+          bytearray: *id491
+          date: *id492
+          decimal: *id493
+          duration: *id494
+          iso-8601: *id495
+          long: *id496
+          object: !!python/object/apply:builtins.getattr
+          - *id501
+          - serialize_object
+          rfc-1123: *id497
+          time: *id498
+          unix-time: *id499
+          '{}': !!python/object/apply:builtins.getattr
+          - *id501
+          - serialize_dict
+      _services: null
+      _source: YAML.JOB
+      _status: null
+      _swept: false
+      _type: command
+      _validate_required_input_not_provided: true
+      comment: null
+      compute: null
+      description: null
+      display_name: prep-data
+      environment: null
+      environment_variables: {}
+      experiment_name: null
+      kwargs:
+        services: null
+      limits: null
+      properties: {}
+      tags: {}
+    register_model: &id502 !!python/object:azure.ai.ml.entities._builders.command.Command
+      _Resource__source_path: ''
+      _allowed_keys: {}
+      _base_path: c:\Users\CalvinPuah-Pernix\VSCodeSaves\DocAIMLOps\DocAI_MLOps\MLOps
+        YML
+      _component: azureml_anonymous:2dd83d0b-5532-43cd-ad0c-de9e6e5d82e7
+      _creation_context: null
+      _distribution: null
+      _id: null
+      _identity: null
+      _init: false
+      _inputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.InputsAttrDict
+        dictitems:
+          evaluation_output: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: ${{parent.jobs.evaluate_model.outputs.evaluation_output}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: ${{parent.jobs.evaluate_model.outputs.evaluation_output}}
+            _owner: *id502
+            _port_name: evaluation_output
+            _type: null
+            _version: ''
+          model_name: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: taxi-model
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: taxi-model
+            _owner: *id502
+            _port_name: model_name
+            _type: null
+            _version: ''
+          model_path: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: ${{parent.jobs.train_model.outputs.model_output}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: ${{parent.jobs.train_model.outputs.model_output}}
+            _owner: *id502
+            _port_name: model_path
+            _type: null
+            _version: ''
+      _instance_id: 8fce9919-a674-4dea-ba8b-cf118a36ff7f
+      _job_inputs:
+        evaluation_output: ${{parent.jobs.evaluate_model.outputs.evaluation_output}}
+        model_name: taxi-model
+        model_path: ${{parent.jobs.train_model.outputs.model_output}}
+      _job_outputs:
+        model_info_output_path: ${{parent.outputs.model_info_output_path}}
+      _key_restriction: false
+      _log_files: null
+      _logger: *id011
+      _name: register_model
+      _outputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.OutputsAttrDict
+        dictitems:
+          model_info_output_path: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeOutput
+            _attribute_map: {}
+            _binding_output: null
+            _data: ${{parent.outputs.model_info_output_path}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: null
+            _original_data: ${{parent.outputs.model_info_output_path}}
+            _owner: *id502
+            _port_name: model_info_output_path
+            _type: null
+            _version: null
+      _parameters: {}
+      _print_as_yaml: false
+      _queue_settings: null
+      _referenced_control_flow_node_instance_id: null
+      _resources: null
+      _serialize: &id503 !!python/object:msrest.serialization.Serializer
+        client_side_validation: false
+        dependencies:
+          AKS: *id012
+          AKSSchema: *id013
+          AKSSchemaProperties: *id014
+          AccountKeyDatastoreCredentials: *id015
+          AccountKeyDatastoreSecrets: *id016
+          AksComputeSecrets: *id017
+          AksComputeSecretsProperties: *id018
+          AksNetworkingConfiguration: *id019
+          AllocationState: *id020
+          AmlCompute: *id021
+          AmlComputeNodeInformation: *id022
+          AmlComputeNodesInformation: *id023
+          AmlComputeProperties: *id024
+          AmlComputeSchema: *id025
+          AmlOperation: *id026
+          AmlOperationDisplay: *id027
+          AmlOperationListResult: *id028
+          AmlToken: *id029
+          AmlUserFeature: *id030
+          ApplicationSharingPolicy: *id031
+          AssetBase: *id032
+          AssetContainer: *id033
+          AssetJobInput: *id034
+          AssetJobOutput: *id035
+          AssetReferenceBase: *id036
+          AssignedUser: *id037
+          AutoForecastHorizon: *id038
+          AutoMLJob: *id039
+          AutoMLVertical: *id040
+          AutoNCrossValidations: *id041
+          AutoPauseProperties: *id042
+          AutoRebuildSetting: *id043
+          AutoScaleProperties: *id044
+          AutoSeasonality: *id045
+          AutoTargetLags: *id046
+          AutoTargetRollingWindowSize: *id047
+          Autosave: *id048
+          AzureBlobDatastore: *id049
+          AzureDataLakeGen1Datastore: *id050
+          AzureDataLakeGen2Datastore: *id051
+          AzureFileDatastore: *id052
+          BanditPolicy: *id053
+          BatchDeployment: *id054
+          BatchDeploymentProperties: *id055
+          BatchDeploymentTrackedResourceArmPaginatedResult: *id056
+          BatchEndpoint: *id057
+          BatchEndpointDefaults: *id058
+          BatchEndpointProperties: *id059
+          BatchEndpointTrackedResourceArmPaginatedResult: *id060
+          BatchLoggingLevel: *id061
+          BatchOutputAction: *id062
+          BatchRetrySettings: *id063
+          BayesianSamplingAlgorithm: *id064
+          BillingCurrency: *id065
+          BlockedTransformers: *id066
+          BuildContext: *id067
+          Caching: *id068
+          CertificateDatastoreCredentials: *id069
+          CertificateDatastoreSecrets: *id070
+          Classification: *id071
+          ClassificationModels: *id072
+          ClassificationMultilabelPrimaryMetrics: *id073
+          ClassificationPrimaryMetrics: *id074
+          ClassificationTrainingSettings: *id075
+          ClusterPurpose: *id076
+          ClusterUpdateParameters: *id077
+          CodeConfiguration: *id078
+          CodeContainer: *id079
+          CodeContainerProperties: *id080
+          CodeContainerResourceArmPaginatedResult: *id081
+          CodeVersion: *id082
+          CodeVersionProperties: *id083
+          CodeVersionResourceArmPaginatedResult: *id084
+          ColumnTransformer: *id085
+          CommandJob: *id086
+          CommandJobLimits: *id087
+          ComponentContainer: *id088
+          ComponentContainerProperties: *id089
+          ComponentContainerResourceArmPaginatedResult: *id090
+          ComponentVersion: *id091
+          ComponentVersionProperties: *id092
+          ComponentVersionResourceArmPaginatedResult: *id093
+          Compute: *id094
+          ComputeInstance: *id095
+          ComputeInstanceApplication: *id096
+          ComputeInstanceAuthorizationType: *id097
+          ComputeInstanceConnectivityEndpoints: *id098
+          ComputeInstanceContainer: *id099
+          ComputeInstanceCreatedBy: *id100
+          ComputeInstanceDataDisk: *id101
+          ComputeInstanceDataMount: *id102
+          ComputeInstanceEnvironmentInfo: *id103
+          ComputeInstanceLastOperation: *id104
+          ComputeInstanceProperties: *id105
+          ComputeInstanceSchema: *id106
+          ComputeInstanceSshSettings: *id107
+          ComputeInstanceState: *id108
+          ComputeInstanceVersion: *id109
+          ComputePowerAction: *id110
+          ComputeResource: *id111
+          ComputeResourceSchema: *id112
+          ComputeSchedules: *id113
+          ComputeSecrets: *id114
+          ComputeStartStopSchedule: *id115
+          ComputeType: *id116
+          ConnectionAuthType: *id117
+          ConnectionCategory: *id118
+          ContainerResourceRequirements: *id119
+          ContainerResourceSettings: *id120
+          ContainerType: *id121
+          CosmosDbSettings: *id122
+          CreatedByType: *id123
+          CredentialsType: *id124
+          CronTrigger: *id125
+          CustomForecastHorizon: *id126
+          CustomModelJobInput: *id127
+          CustomModelJobOutput: *id128
+          CustomNCrossValidations: *id129
+          CustomSeasonality: *id130
+          CustomTargetLags: *id131
+          CustomTargetRollingWindowSize: *id132
+          DataContainer: *id133
+          DataContainerProperties: *id134
+          DataContainerResourceArmPaginatedResult: *id135
+          DataFactory: *id136
+          DataLakeAnalytics: *id137
+          DataLakeAnalyticsSchema: *id138
+          DataLakeAnalyticsSchemaProperties: *id139
+          DataPathAssetReference: *id140
+          DataType: *id141
+          DataVersionBase: *id142
+          DataVersionBaseProperties: *id143
+          DataVersionBaseResourceArmPaginatedResult: *id144
+          Databricks: *id145
+          DatabricksComputeSecrets: *id146
+          DatabricksComputeSecretsProperties: *id147
+          DatabricksProperties: *id148
+          DatabricksSchema: *id149
+          Datastore: *id150
+          DatastoreCredentials: *id151
+          DatastoreProperties: *id152
+          DatastoreResourceArmPaginatedResult: *id153
+          DatastoreSecrets: *id154
+          DatastoreType: *id155
+          DefaultScaleSettings: *id156
+          DeploymentLogs: *id157
+          DeploymentLogsRequest: *id158
+          DeploymentProvisioningState: *id159
+          DeploymentResourceConfiguration: *id160
+          DiagnoseRequestProperties: *id161
+          DiagnoseResponseResult: *id162
+          DiagnoseResponseResultValue: *id163
+          DiagnoseResult: *id164
+          DiagnoseResultLevel: *id165
+          DiagnoseWorkspaceParameters: *id166
+          DistributionConfiguration: *id167
+          DistributionType: *id168
+          EarlyTerminationPolicy: *id169
+          EarlyTerminationPolicyType: *id170
+          EgressPublicNetworkAccessType: *id171
+          EncryptionKeyVaultProperties: *id172
+          EncryptionProperty: *id173
+          EncryptionStatus: *id174
+          EndpointAuthKeys: *id175
+          EndpointAuthMode: *id176
+          EndpointAuthToken: *id177
+          EndpointComputeType: *id178
+          EndpointDeploymentPropertiesBase: *id179
+          EndpointPropertiesBase: *id180
+          EndpointProvisioningState: *id181
+          EndpointScheduleAction: *id182
+          EnvironmentContainer: *id183
+          EnvironmentContainerProperties: *id184
+          EnvironmentContainerResourceArmPaginatedResult: *id185
+          EnvironmentType: *id186
+          EnvironmentVersion: *id187
+          EnvironmentVersionProperties: *id188
+          EnvironmentVersionResourceArmPaginatedResult: *id189
+          ErrorAdditionalInfo: *id190
+          ErrorDetail: *id191
+          ErrorResponse: *id192
+          EstimatedVMPrice: *id193
+          EstimatedVMPrices: *id194
+          ExternalFQDNResponse: *id195
+          FQDNEndpoint: *id196
+          FQDNEndpointDetail: *id197
+          FQDNEndpoints: *id198
+          FQDNEndpointsProperties: *id199
+          FeatureLags: *id200
+          FeaturizationMode: *id201
+          FeaturizationSettings: *id202
+          FlavorData: *id203
+          ForecastHorizon: *id204
+          ForecastHorizonMode: *id205
+          Forecasting: *id206
+          ForecastingModels: *id207
+          ForecastingPrimaryMetrics: *id208
+          ForecastingSettings: *id209
+          ForecastingTrainingSettings: *id210
+          Goal: *id211
+          GridSamplingAlgorithm: *id212
+          HDInsight: *id213
+          HDInsightProperties: *id214
+          HDInsightSchema: *id215
+          IdAssetReference: *id216
+          IdentityConfiguration: *id217
+          IdentityConfigurationType: *id218
+          IdentityForCmk: *id219
+          ImageClassification: *id220
+          ImageClassificationBase: *id221
+          ImageClassificationMultilabel: *id222
+          ImageInstanceSegmentation: *id223
+          ImageLimitSettings: *id224
+          ImageModelDistributionSettings: *id225
+          ImageModelDistributionSettingsClassification: *id226
+          ImageModelDistributionSettingsObjectDetection: *id227
+          ImageModelSettings: *id228
+          ImageModelSettingsClassification: *id229
+          ImageModelSettingsObjectDetection: *id230
+          ImageObjectDetection: *id231
+          ImageObjectDetectionBase: *id232
+          ImageSweepSettings: *id233
+          ImageVertical: *id234
+          InferenceContainerProperties: *id235
+          InputDeliveryMode: *id236
+          InstanceSegmentationPrimaryMetrics: *id237
+          InstanceTypeSchema: *id238
+          InstanceTypeSchemaResources: *id239
+          JobBase: *id240
+          JobBaseProperties: *id241
+          JobBaseResourceArmPaginatedResult: *id242
+          JobInput: *id243
+          JobInputType: *id244
+          JobLimits: *id245
+          JobLimitsType: *id246
+          JobOutput: *id247
+          JobOutputType: *id248
+          JobResourceConfiguration: *id249
+          JobScheduleAction: *id250
+          JobService: *id251
+          JobStatus: *id252
+          JobType: *id253
+          KeyType: *id254
+          Kubernetes: *id255
+          KubernetesOnlineDeployment: *id256
+          KubernetesProperties: *id257
+          KubernetesSchema: *id258
+          LearningRateScheduler: *id259
+          ListAmlUserFeatureResult: *id260
+          ListNotebookKeysResult: *id261
+          ListStorageAccountKeysResult: *id262
+          ListUsagesResult: *id263
+          ListViewType: *id264
+          ListWorkspaceKeysResult: *id265
+          ListWorkspaceQuotas: *id266
+          LiteralJobInput: *id267
+          LoadBalancerType: *id268
+          LogVerbosity: *id269
+          MLFlowModelJobInput: *id270
+          MLFlowModelJobOutput: *id271
+          MLTableData: *id272
+          MLTableJobInput: *id273
+          MLTableJobOutput: *id274
+          ManagedIdentity: *id275
+          ManagedIdentityAuthTypeWorkspaceConnectionProperties: *id276
+          ManagedOnlineDeployment: *id277
+          ManagedServiceIdentity: *id278
+          ManagedServiceIdentityType: *id279
+          MedianStoppingPolicy: *id280
+          ModelContainer: *id281
+          ModelContainerProperties: *id282
+          ModelContainerResourceArmPaginatedResult: *id283
+          ModelSize: *id284
+          ModelVersion: *id285
+          ModelVersionProperties: *id286
+          ModelVersionResourceArmPaginatedResult: *id287
+          MountAction: *id288
+          MountState: *id289
+          Mpi: *id290
+          NCrossValidations: *id291
+          NCrossValidationsMode: *id292
+          Network: *id293
+          NlpVertical: *id294
+          NlpVerticalFeaturizationSettings: *id295
+          NlpVerticalLimitSettings: *id296
+          NodeState: *id297
+          NodeStateCounts: *id298
+          NoneAuthTypeWorkspaceConnectionProperties: *id299
+          NoneDatastoreCredentials: *id300
+          NotebookAccessTokenResult: *id301
+          NotebookPreparationError: *id302
+          NotebookResourceInfo: *id303
+          ObjectDetectionPrimaryMetrics: *id304
+          Objective: *id305
+          OnlineDeployment: *id306
+          OnlineDeploymentProperties: *id307
+          OnlineDeploymentTrackedResourceArmPaginatedResult: *id308
+          OnlineEndpoint: *id309
+          OnlineEndpointProperties: *id310
+          OnlineEndpointTrackedResourceArmPaginatedResult: *id311
+          OnlineRequestSettings: *id312
+          OnlineScaleSettings: *id313
+          OperatingSystemType: *id314
+          OperationName: *id315
+          OperationStatus: *id316
+          OperationTrigger: *id317
+          OrderString: *id318
+          OsType: *id319
+          OutputDeliveryMode: *id320
+          OutputPathAssetReference: *id321
+          PATAuthTypeWorkspaceConnectionProperties: *id322
+          PaginatedComputeResourcesList: *id323
+          PartialBatchDeployment: *id324
+          PartialBatchDeploymentPartialMinimalTrackedResourceWithProperties: *id325
+          PartialManagedServiceIdentity: *id326
+          PartialMinimalTrackedResource: *id327
+          PartialMinimalTrackedResourceWithIdentity: *id328
+          PartialMinimalTrackedResourceWithSku: *id329
+          PartialSku: *id330
+          Password: *id331
+          PersonalComputeInstanceSettings: *id332
+          PipelineJob: *id333
+          PrivateEndpoint: *id334
+          PrivateEndpointConnection: *id335
+          PrivateEndpointConnectionListResult: *id336
+          PrivateEndpointConnectionProvisioningState: *id337
+          PrivateEndpointServiceConnectionStatus: *id338
+          PrivateLinkResource: *id339
+          PrivateLinkResourceListResult: *id340
+          PrivateLinkServiceConnectionState: *id341
+          ProbeSettings: *id342
+          ProvisioningState: *id343
+          ProvisioningStatus: *id344
+          PublicNetworkAccess: *id345
+          PublicNetworkAccessType: *id346
+          PyTorch: *id347
+          QuotaBaseProperties: *id348
+          QuotaUnit: *id349
+          QuotaUpdateParameters: *id350
+          RandomSamplingAlgorithm: *id351
+          RandomSamplingAlgorithmRule: *id352
+          RecurrenceFrequency: *id353
+          RecurrenceSchedule: *id354
+          RecurrenceTrigger: *id355
+          ReferenceType: *id356
+          RegenerateEndpointKeysRequest: *id357
+          RegistryListCredentialsResult: *id358
+          Regression: *id359
+          RegressionModels: *id360
+          RegressionPrimaryMetrics: *id361
+          RegressionTrainingSettings: *id362
+          RemoteLoginPortPublicAccess: *id363
+          Resource: *id364
+          ResourceBase: *id365
+          ResourceConfiguration: *id366
+          ResourceId: *id367
+          ResourceName: *id368
+          ResourceQuota: *id369
+          Route: *id370
+          SASAuthTypeWorkspaceConnectionProperties: *id371
+          SamplingAlgorithm: *id372
+          SamplingAlgorithmType: *id373
+          SasDatastoreCredentials: *id374
+          SasDatastoreSecrets: *id375
+          ScaleSettings: *id376
+          ScaleSettingsInformation: *id377
+          ScaleType: *id378
+          Schedule: *id379
+          ScheduleActionBase: *id380
+          ScheduleActionType: *id381
+          ScheduleBase: *id382
+          ScheduleListViewType: *id383
+          ScheduleProperties: *id384
+          ScheduleProvisioningState: *id385
+          ScheduleProvisioningStatus: *id386
+          ScheduleResourceArmPaginatedResult: *id387
+          ScheduleStatus: *id388
+          ScriptReference: *id389
+          ScriptsToExecute: *id390
+          Seasonality: *id391
+          SeasonalityMode: *id392
+          SecretsType: *id393
+          ServiceDataAccessAuthIdentity: *id394
+          ServiceManagedResourcesSettings: *id395
+          ServicePrincipalDatastoreCredentials: *id396
+          ServicePrincipalDatastoreSecrets: *id397
+          SetupScripts: *id398
+          SharedPrivateLinkResource: *id399
+          ShortSeriesHandlingConfiguration: *id400
+          Sku: *id401
+          SkuCapacity: *id402
+          SkuResource: *id403
+          SkuResourceArmPaginatedResult: *id404
+          SkuScaleType: *id405
+          SkuSetting: *id406
+          SkuTier: *id407
+          SourceType: *id408
+          SshPublicAccess: *id409
+          SslConfigStatus: *id410
+          SslConfiguration: *id411
+          StackEnsembleSettings: *id412
+          StackMetaLearnerType: *id413
+          Status: *id414
+          StochasticOptimizer: *id415
+          StorageAccountType: *id416
+          SweepJob: *id417
+          SweepJobLimits: *id418
+          SynapseSpark: *id419
+          SynapseSparkProperties: *id420
+          SystemData: *id421
+          SystemService: *id422
+          TableVertical: *id423
+          TableVerticalFeaturizationSettings: *id424
+          TableVerticalLimitSettings: *id425
+          TargetAggregationFunction: *id426
+          TargetLags: *id427
+          TargetLagsMode: *id428
+          TargetRollingWindowSize: *id429
+          TargetRollingWindowSizeMode: *id430
+          TargetUtilizationScaleSettings: *id431
+          TaskType: *id432
+          TensorFlow: *id433
+          TextClassification: *id434
+          TextClassificationMultilabel: *id435
+          TextNer: *id436
+          TrackedResource: *id437
+          TrainingSettings: *id438
+          TrialComponent: *id439
+          TriggerBase: *id440
+          TriggerType: *id441
+          TritonModelJobInput: *id442
+          TritonModelJobOutput: *id443
+          TruncationSelectionPolicy: *id444
+          UnderlyingResourceAction: *id445
+          UnitOfMeasure: *id446
+          UpdateWorkspaceQuotas: *id447
+          UpdateWorkspaceQuotasResult: *id448
+          UriFileDataVersion: *id449
+          UriFileJobInput: *id450
+          UriFileJobOutput: *id451
+          UriFolderDataVersion: *id452
+          UriFolderJobInput: *id453
+          UriFolderJobOutput: *id454
+          Usage: *id455
+          UsageName: *id456
+          UsageUnit: *id457
+          UseStl: *id458
+          UserAccountCredentials: *id459
+          UserAssignedIdentity: *id460
+          UserIdentity: *id461
+          UsernamePasswordAuthTypeWorkspaceConnectionProperties: *id462
+          VMPriceOSType: *id463
+          VMTier: *id464
+          ValidationMetricType: *id465
+          ValueFormat: *id466
+          VirtualMachine: *id467
+          VirtualMachineImage: *id468
+          VirtualMachineSchema: *id469
+          VirtualMachineSchemaProperties: *id470
+          VirtualMachineSecrets: *id471
+          VirtualMachineSecretsSchema: *id472
+          VirtualMachineSize: *id473
+          VirtualMachineSizeListResult: *id474
+          VirtualMachineSshCredentials: *id475
+          VmPriority: *id476
+          WeekDay: *id477
+          Workspace: *id478
+          WorkspaceConnectionManagedIdentity: *id479
+          WorkspaceConnectionPersonalAccessToken: *id480
+          WorkspaceConnectionPropertiesV2: *id481
+          WorkspaceConnectionPropertiesV2BasicResource: *id482
+          WorkspaceConnectionPropertiesV2BasicResourceArmPaginatedResult: *id483
+          WorkspaceConnectionSharedAccessSignature: *id484
+          WorkspaceConnectionUsernamePassword: *id485
+          WorkspaceListResult: *id486
+          WorkspaceUpdateParameters: *id487
+        key_transformer: *id488
+        serialize_type:
+          '[]': !!python/object/apply:builtins.getattr
+          - *id503
+          - serialize_iter
+          base64: *id490
+          bytearray: *id491
+          date: *id492
+          decimal: *id493
+          duration: *id494
+          iso-8601: *id495
+          long: *id496
+          object: !!python/object/apply:builtins.getattr
+          - *id503
+          - serialize_object
+          rfc-1123: *id497
+          time: *id498
+          unix-time: *id499
+          '{}': !!python/object/apply:builtins.getattr
+          - *id503
+          - serialize_dict
+      _services: null
+      _source: YAML.JOB
+      _status: null
+      _swept: false
+      _type: command
+      _validate_required_input_not_provided: true
+      comment: null
+      compute: null
+      description: null
+      display_name: register-model
+      environment: null
+      environment_variables: {}
+      experiment_name: null
+      kwargs:
+        services: null
+      limits: null
+      properties: {}
+      tags: {}
+    train_model: &id504 !!python/object:azure.ai.ml.entities._builders.command.Command
+      _Resource__source_path: ''
+      _allowed_keys: {}
+      _base_path: c:\Users\CalvinPuah-Pernix\VSCodeSaves\DocAIMLOps\DocAI_MLOps\MLOps
+        YML
+      _component: azureml_anonymous:d4680b32-a70e-4cdd-8e2c-0362d0580cce
+      _creation_context: null
+      _distribution: null
+      _id: null
+      _identity: null
+      _init: false
+      _inputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.InputsAttrDict
+        dictitems:
+          train_data: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeInput
+            _attribute_map: {}
+            _data: ${{parent.jobs.prep_data.outputs.train_data}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: ''
+            _original_data: ${{parent.jobs.prep_data.outputs.train_data}}
+            _owner: *id504
+            _port_name: train_data
+            _type: null
+            _version: ''
+      _instance_id: a3417355-3a5e-4dba-b25e-15d5d68ac296
+      _job_inputs:
+        train_data: ${{parent.jobs.prep_data.outputs.train_data}}
+      _job_outputs:
+        model_output: ${{parent.outputs.trained_model}}
+      _key_restriction: false
+      _log_files: null
+      _logger: *id011
+      _name: train_model
+      _outputs: !!python/object/new:azure.ai.ml.entities._job.pipeline._io.attr_dict.OutputsAttrDict
+        dictitems:
+          model_output: !!python/object:azure.ai.ml.entities._job.pipeline._io.base.NodeOutput
+            _attribute_map: {}
+            _binding_output: null
+            _data: ${{parent.outputs.trained_model}}
+            _default_data: null
+            _description: null
+            _meta: null
+            _mode: null
+            _name: null
+            _original_data: ${{parent.outputs.trained_model}}
+            _owner: *id504
+            _port_name: model_output
+            _type: null
+            _version: null
+      _parameters: {}
+      _print_as_yaml: false
+      _queue_settings: null
+      _referenced_control_flow_node_instance_id: null
+      _resources: null
+      _serialize: &id505 !!python/object:msrest.serialization.Serializer
+        client_side_validation: false
+        dependencies:
+          AKS: *id012
+          AKSSchema: *id013
+          AKSSchemaProperties: *id014
+          AccountKeyDatastoreCredentials: *id015
+          AccountKeyDatastoreSecrets: *id016
+          AksComputeSecrets: *id017
+          AksComputeSecretsProperties: *id018
+          AksNetworkingConfiguration: *id019
+          AllocationState: *id020
+          AmlCompute: *id021
+          AmlComputeNodeInformation: *id022
+          AmlComputeNodesInformation: *id023
+          AmlComputeProperties: *id024
+          AmlComputeSchema: *id025
+          AmlOperation: *id026
+          AmlOperationDisplay: *id027
+          AmlOperationListResult: *id028
+          AmlToken: *id029
+          AmlUserFeature: *id030
+          ApplicationSharingPolicy: *id031
+          AssetBase: *id032
+          AssetContainer: *id033
+          AssetJobInput: *id034
+          AssetJobOutput: *id035
+          AssetReferenceBase: *id036
+          AssignedUser: *id037
+          AutoForecastHorizon: *id038
+          AutoMLJob: *id039
+          AutoMLVertical: *id040
+          AutoNCrossValidations: *id041
+          AutoPauseProperties: *id042
+          AutoRebuildSetting: *id043
+          AutoScaleProperties: *id044
+          AutoSeasonality: *id045
+          AutoTargetLags: *id046
+          AutoTargetRollingWindowSize: *id047
+          Autosave: *id048
+          AzureBlobDatastore: *id049
+          AzureDataLakeGen1Datastore: *id050
+          AzureDataLakeGen2Datastore: *id051
+          AzureFileDatastore: *id052
+          BanditPolicy: *id053
+          BatchDeployment: *id054
+          BatchDeploymentProperties: *id055
+          BatchDeploymentTrackedResourceArmPaginatedResult: *id056
+          BatchEndpoint: *id057
+          BatchEndpointDefaults: *id058
+          BatchEndpointProperties: *id059
+          BatchEndpointTrackedResourceArmPaginatedResult: *id060
+          BatchLoggingLevel: *id061
+          BatchOutputAction: *id062
+          BatchRetrySettings: *id063
+          BayesianSamplingAlgorithm: *id064
+          BillingCurrency: *id065
+          BlockedTransformers: *id066
+          BuildContext: *id067
+          Caching: *id068
+          CertificateDatastoreCredentials: *id069
+          CertificateDatastoreSecrets: *id070
+          Classification: *id071
+          ClassificationModels: *id072
+          ClassificationMultilabelPrimaryMetrics: *id073
+          ClassificationPrimaryMetrics: *id074
+          ClassificationTrainingSettings: *id075
+          ClusterPurpose: *id076
+          ClusterUpdateParameters: *id077
+          CodeConfiguration: *id078
+          CodeContainer: *id079
+          CodeContainerProperties: *id080
+          CodeContainerResourceArmPaginatedResult: *id081
+          CodeVersion: *id082
+          CodeVersionProperties: *id083
+          CodeVersionResourceArmPaginatedResult: *id084
+          ColumnTransformer: *id085
+          CommandJob: *id086
+          CommandJobLimits: *id087
+          ComponentContainer: *id088
+          ComponentContainerProperties: *id089
+          ComponentContainerResourceArmPaginatedResult: *id090
+          ComponentVersion: *id091
+          ComponentVersionProperties: *id092
+          ComponentVersionResourceArmPaginatedResult: *id093
+          Compute: *id094
+          ComputeInstance: *id095
+          ComputeInstanceApplication: *id096
+          ComputeInstanceAuthorizationType: *id097
+          ComputeInstanceConnectivityEndpoints: *id098
+          ComputeInstanceContainer: *id099
+          ComputeInstanceCreatedBy: *id100
+          ComputeInstanceDataDisk: *id101
+          ComputeInstanceDataMount: *id102
+          ComputeInstanceEnvironmentInfo: *id103
+          ComputeInstanceLastOperation: *id104
+          ComputeInstanceProperties: *id105
+          ComputeInstanceSchema: *id106
+          ComputeInstanceSshSettings: *id107
+          ComputeInstanceState: *id108
+          ComputeInstanceVersion: *id109
+          ComputePowerAction: *id110
+          ComputeResource: *id111
+          ComputeResourceSchema: *id112
+          ComputeSchedules: *id113
+          ComputeSecrets: *id114
+          ComputeStartStopSchedule: *id115
+          ComputeType: *id116
+          ConnectionAuthType: *id117
+          ConnectionCategory: *id118
+          ContainerResourceRequirements: *id119
+          ContainerResourceSettings: *id120
+          ContainerType: *id121
+          CosmosDbSettings: *id122
+          CreatedByType: *id123
+          CredentialsType: *id124
+          CronTrigger: *id125
+          CustomForecastHorizon: *id126
+          CustomModelJobInput: *id127
+          CustomModelJobOutput: *id128
+          CustomNCrossValidations: *id129
+          CustomSeasonality: *id130
+          CustomTargetLags: *id131
+          CustomTargetRollingWindowSize: *id132
+          DataContainer: *id133
+          DataContainerProperties: *id134
+          DataContainerResourceArmPaginatedResult: *id135
+          DataFactory: *id136
+          DataLakeAnalytics: *id137
+          DataLakeAnalyticsSchema: *id138
+          DataLakeAnalyticsSchemaProperties: *id139
+          DataPathAssetReference: *id140
+          DataType: *id141
+          DataVersionBase: *id142
+          DataVersionBaseProperties: *id143
+          DataVersionBaseResourceArmPaginatedResult: *id144
+          Databricks: *id145
+          DatabricksComputeSecrets: *id146
+          DatabricksComputeSecretsProperties: *id147
+          DatabricksProperties: *id148
+          DatabricksSchema: *id149
+          Datastore: *id150
+          DatastoreCredentials: *id151
+          DatastoreProperties: *id152
+          DatastoreResourceArmPaginatedResult: *id153
+          DatastoreSecrets: *id154
+          DatastoreType: *id155
+          DefaultScaleSettings: *id156
+          DeploymentLogs: *id157
+          DeploymentLogsRequest: *id158
+          DeploymentProvisioningState: *id159
+          DeploymentResourceConfiguration: *id160
+          DiagnoseRequestProperties: *id161
+          DiagnoseResponseResult: *id162
+          DiagnoseResponseResultValue: *id163
+          DiagnoseResult: *id164
+          DiagnoseResultLevel: *id165
+          DiagnoseWorkspaceParameters: *id166
+          DistributionConfiguration: *id167
+          DistributionType: *id168
+          EarlyTerminationPolicy: *id169
+          EarlyTerminationPolicyType: *id170
+          EgressPublicNetworkAccessType: *id171
+          EncryptionKeyVaultProperties: *id172
+          EncryptionProperty: *id173
+          EncryptionStatus: *id174
+          EndpointAuthKeys: *id175
+          EndpointAuthMode: *id176
+          EndpointAuthToken: *id177
+          EndpointComputeType: *id178
+          EndpointDeploymentPropertiesBase: *id179
+          EndpointPropertiesBase: *id180
+          EndpointProvisioningState: *id181
+          EndpointScheduleAction: *id182
+          EnvironmentContainer: *id183
+          EnvironmentContainerProperties: *id184
+          EnvironmentContainerResourceArmPaginatedResult: *id185
+          EnvironmentType: *id186
+          EnvironmentVersion: *id187
+          EnvironmentVersionProperties: *id188
+          EnvironmentVersionResourceArmPaginatedResult: *id189
+          ErrorAdditionalInfo: *id190
+          ErrorDetail: *id191
+          ErrorResponse: *id192
+          EstimatedVMPrice: *id193
+          EstimatedVMPrices: *id194
+          ExternalFQDNResponse: *id195
+          FQDNEndpoint: *id196
+          FQDNEndpointDetail: *id197
+          FQDNEndpoints: *id198
+          FQDNEndpointsProperties: *id199
+          FeatureLags: *id200
+          FeaturizationMode: *id201
+          FeaturizationSettings: *id202
+          FlavorData: *id203
+          ForecastHorizon: *id204
+          ForecastHorizonMode: *id205
+          Forecasting: *id206
+          ForecastingModels: *id207
+          ForecastingPrimaryMetrics: *id208
+          ForecastingSettings: *id209
+          ForecastingTrainingSettings: *id210
+          Goal: *id211
+          GridSamplingAlgorithm: *id212
+          HDInsight: *id213
+          HDInsightProperties: *id214
+          HDInsightSchema: *id215
+          IdAssetReference: *id216
+          IdentityConfiguration: *id217
+          IdentityConfigurationType: *id218
+          IdentityForCmk: *id219
+          ImageClassification: *id220
+          ImageClassificationBase: *id221
+          ImageClassificationMultilabel: *id222
+          ImageInstanceSegmentation: *id223
+          ImageLimitSettings: *id224
+          ImageModelDistributionSettings: *id225
+          ImageModelDistributionSettingsClassification: *id226
+          ImageModelDistributionSettingsObjectDetection: *id227
+          ImageModelSettings: *id228
+          ImageModelSettingsClassification: *id229
+          ImageModelSettingsObjectDetection: *id230
+          ImageObjectDetection: *id231
+          ImageObjectDetectionBase: *id232
+          ImageSweepSettings: *id233
+          ImageVertical: *id234
+          InferenceContainerProperties: *id235
+          InputDeliveryMode: *id236
+          InstanceSegmentationPrimaryMetrics: *id237
+          InstanceTypeSchema: *id238
+          InstanceTypeSchemaResources: *id239
+          JobBase: *id240
+          JobBaseProperties: *id241
+          JobBaseResourceArmPaginatedResult: *id242
+          JobInput: *id243
+          JobInputType: *id244
+          JobLimits: *id245
+          JobLimitsType: *id246
+          JobOutput: *id247
+          JobOutputType: *id248
+          JobResourceConfiguration: *id249
+          JobScheduleAction: *id250
+          JobService: *id251
+          JobStatus: *id252
+          JobType: *id253
+          KeyType: *id254
+          Kubernetes: *id255
+          KubernetesOnlineDeployment: *id256
+          KubernetesProperties: *id257
+          KubernetesSchema: *id258
+          LearningRateScheduler: *id259
+          ListAmlUserFeatureResult: *id260
+          ListNotebookKeysResult: *id261
+          ListStorageAccountKeysResult: *id262
+          ListUsagesResult: *id263
+          ListViewType: *id264
+          ListWorkspaceKeysResult: *id265
+          ListWorkspaceQuotas: *id266
+          LiteralJobInput: *id267
+          LoadBalancerType: *id268
+          LogVerbosity: *id269
+          MLFlowModelJobInput: *id270
+          MLFlowModelJobOutput: *id271
+          MLTableData: *id272
+          MLTableJobInput: *id273
+          MLTableJobOutput: *id274
+          ManagedIdentity: *id275
+          ManagedIdentityAuthTypeWorkspaceConnectionProperties: *id276
+          ManagedOnlineDeployment: *id277
+          ManagedServiceIdentity: *id278
+          ManagedServiceIdentityType: *id279
+          MedianStoppingPolicy: *id280
+          ModelContainer: *id281
+          ModelContainerProperties: *id282
+          ModelContainerResourceArmPaginatedResult: *id283
+          ModelSize: *id284
+          ModelVersion: *id285
+          ModelVersionProperties: *id286
+          ModelVersionResourceArmPaginatedResult: *id287
+          MountAction: *id288
+          MountState: *id289
+          Mpi: *id290
+          NCrossValidations: *id291
+          NCrossValidationsMode: *id292
+          Network: *id293
+          NlpVertical: *id294
+          NlpVerticalFeaturizationSettings: *id295
+          NlpVerticalLimitSettings: *id296
+          NodeState: *id297
+          NodeStateCounts: *id298
+          NoneAuthTypeWorkspaceConnectionProperties: *id299
+          NoneDatastoreCredentials: *id300
+          NotebookAccessTokenResult: *id301
+          NotebookPreparationError: *id302
+          NotebookResourceInfo: *id303
+          ObjectDetectionPrimaryMetrics: *id304
+          Objective: *id305
+          OnlineDeployment: *id306
+          OnlineDeploymentProperties: *id307
+          OnlineDeploymentTrackedResourceArmPaginatedResult: *id308
+          OnlineEndpoint: *id309
+          OnlineEndpointProperties: *id310
+          OnlineEndpointTrackedResourceArmPaginatedResult: *id311
+          OnlineRequestSettings: *id312
+          OnlineScaleSettings: *id313
+          OperatingSystemType: *id314
+          OperationName: *id315
+          OperationStatus: *id316
+          OperationTrigger: *id317
+          OrderString: *id318
+          OsType: *id319
+          OutputDeliveryMode: *id320
+          OutputPathAssetReference: *id321
+          PATAuthTypeWorkspaceConnectionProperties: *id322
+          PaginatedComputeResourcesList: *id323
+          PartialBatchDeployment: *id324
+          PartialBatchDeploymentPartialMinimalTrackedResourceWithProperties: *id325
+          PartialManagedServiceIdentity: *id326
+          PartialMinimalTrackedResource: *id327
+          PartialMinimalTrackedResourceWithIdentity: *id328
+          PartialMinimalTrackedResourceWithSku: *id329
+          PartialSku: *id330
+          Password: *id331
+          PersonalComputeInstanceSettings: *id332
+          PipelineJob: *id333
+          PrivateEndpoint: *id334
+          PrivateEndpointConnection: *id335
+          PrivateEndpointConnectionListResult: *id336
+          PrivateEndpointConnectionProvisioningState: *id337
+          PrivateEndpointServiceConnectionStatus: *id338
+          PrivateLinkResource: *id339
+          PrivateLinkResourceListResult: *id340
+          PrivateLinkServiceConnectionState: *id341
+          ProbeSettings: *id342
+          ProvisioningState: *id343
+          ProvisioningStatus: *id344
+          PublicNetworkAccess: *id345
+          PublicNetworkAccessType: *id346
+          PyTorch: *id347
+          QuotaBaseProperties: *id348
+          QuotaUnit: *id349
+          QuotaUpdateParameters: *id350
+          RandomSamplingAlgorithm: *id351
+          RandomSamplingAlgorithmRule: *id352
+          RecurrenceFrequency: *id353
+          RecurrenceSchedule: *id354
+          RecurrenceTrigger: *id355
+          ReferenceType: *id356
+          RegenerateEndpointKeysRequest: *id357
+          RegistryListCredentialsResult: *id358
+          Regression: *id359
+          RegressionModels: *id360
+          RegressionPrimaryMetrics: *id361
+          RegressionTrainingSettings: *id362
+          RemoteLoginPortPublicAccess: *id363
+          Resource: *id364
+          ResourceBase: *id365
+          ResourceConfiguration: *id366
+          ResourceId: *id367
+          ResourceName: *id368
+          ResourceQuota: *id369
+          Route: *id370
+          SASAuthTypeWorkspaceConnectionProperties: *id371
+          SamplingAlgorithm: *id372
+          SamplingAlgorithmType: *id373
+          SasDatastoreCredentials: *id374
+          SasDatastoreSecrets: *id375
+          ScaleSettings: *id376
+          ScaleSettingsInformation: *id377
+          ScaleType: *id378
+          Schedule: *id379
+          ScheduleActionBase: *id380
+          ScheduleActionType: *id381
+          ScheduleBase: *id382
+          ScheduleListViewType: *id383
+          ScheduleProperties: *id384
+          ScheduleProvisioningState: *id385
+          ScheduleProvisioningStatus: *id386
+          ScheduleResourceArmPaginatedResult: *id387
+          ScheduleStatus: *id388
+          ScriptReference: *id389
+          ScriptsToExecute: *id390
+          Seasonality: *id391
+          SeasonalityMode: *id392
+          SecretsType: *id393
+          ServiceDataAccessAuthIdentity: *id394
+          ServiceManagedResourcesSettings: *id395
+          ServicePrincipalDatastoreCredentials: *id396
+          ServicePrincipalDatastoreSecrets: *id397
+          SetupScripts: *id398
+          SharedPrivateLinkResource: *id399
+          ShortSeriesHandlingConfiguration: *id400
+          Sku: *id401
+          SkuCapacity: *id402
+          SkuResource: *id403
+          SkuResourceArmPaginatedResult: *id404
+          SkuScaleType: *id405
+          SkuSetting: *id406
+          SkuTier: *id407
+          SourceType: *id408
+          SshPublicAccess: *id409
+          SslConfigStatus: *id410
+          SslConfiguration: *id411
+          StackEnsembleSettings: *id412
+          StackMetaLearnerType: *id413
+          Status: *id414
+          StochasticOptimizer: *id415
+          StorageAccountType: *id416
+          SweepJob: *id417
+          SweepJobLimits: *id418
+          SynapseSpark: *id419
+          SynapseSparkProperties: *id420
+          SystemData: *id421
+          SystemService: *id422
+          TableVertical: *id423
+          TableVerticalFeaturizationSettings: *id424
+          TableVerticalLimitSettings: *id425
+          TargetAggregationFunction: *id426
+          TargetLags: *id427
+          TargetLagsMode: *id428
+          TargetRollingWindowSize: *id429
+          TargetRollingWindowSizeMode: *id430
+          TargetUtilizationScaleSettings: *id431
+          TaskType: *id432
+          TensorFlow: *id433
+          TextClassification: *id434
+          TextClassificationMultilabel: *id435
+          TextNer: *id436
+          TrackedResource: *id437
+          TrainingSettings: *id438
+          TrialComponent: *id439
+          TriggerBase: *id440
+          TriggerType: *id441
+          TritonModelJobInput: *id442
+          TritonModelJobOutput: *id443
+          TruncationSelectionPolicy: *id444
+          UnderlyingResourceAction: *id445
+          UnitOfMeasure: *id446
+          UpdateWorkspaceQuotas: *id447
+          UpdateWorkspaceQuotasResult: *id448
+          UriFileDataVersion: *id449
+          UriFileJobInput: *id450
+          UriFileJobOutput: *id451
+          UriFolderDataVersion: *id452
+          UriFolderJobInput: *id453
+          UriFolderJobOutput: *id454
+          Usage: *id455
+          UsageName: *id456
+          UsageUnit: *id457
+          UseStl: *id458
+          UserAccountCredentials: *id459
+          UserAssignedIdentity: *id460
+          UserIdentity: *id461
+          UsernamePasswordAuthTypeWorkspaceConnectionProperties: *id462
+          VMPriceOSType: *id463
+          VMTier: *id464
+          ValidationMetricType: *id465
+          ValueFormat: *id466
+          VirtualMachine: *id467
+          VirtualMachineImage: *id468
+          VirtualMachineSchema: *id469
+          VirtualMachineSchemaProperties: *id470
+          VirtualMachineSecrets: *id471
+          VirtualMachineSecretsSchema: *id472
+          VirtualMachineSize: *id473
+          VirtualMachineSizeListResult: *id474
+          VirtualMachineSshCredentials: *id475
+          VmPriority: *id476
+          WeekDay: *id477
+          Workspace: *id478
+          WorkspaceConnectionManagedIdentity: *id479
+          WorkspaceConnectionPersonalAccessToken: *id480
+          WorkspaceConnectionPropertiesV2: *id481
+          WorkspaceConnectionPropertiesV2BasicResource: *id482
+          WorkspaceConnectionPropertiesV2BasicResourceArmPaginatedResult: *id483
+          WorkspaceConnectionSharedAccessSignature: *id484
+          WorkspaceConnectionUsernamePassword: *id485
+          WorkspaceListResult: *id486
+          WorkspaceUpdateParameters: *id487
+        key_transformer: *id488
+        serialize_type:
+          '[]': !!python/object/apply:builtins.getattr
+          - *id505
+          - serialize_iter
+          base64: *id490
+          bytearray: *id491
+          date: *id492
+          decimal: *id493
+          duration: *id494
+          iso-8601: *id495
+          long: *id496
+          object: !!python/object/apply:builtins.getattr
+          - *id505
+          - serialize_object
+          rfc-1123: *id497
+          time: *id498
+          unix-time: *id499
+          '{}': !!python/object/apply:builtins.getattr
+          - *id505
+          - serialize_dict
+      _services: null
+      _source: YAML.JOB
+      _status: null
+      _swept: false
+      _type: command
+      _validate_required_input_not_provided: true
+      comment: null
+      compute: null
+      description: null
+      display_name: train-model
+      environment: null
+      environment_variables: {}
+      experiment_name: null
+      kwargs:
+        services: null
+      limits: null
+      properties: {}
+      tags: {}
+  _other_parameter: {}
+  _outputs:
+    evaluation_output: !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+      _intellectual_property: null
+      _is_primitive_type: false
+      _port_name: null
+      description: null
+      early_available: null
+      mode: null
+      name: null
+      path: null
+      path_on_compute: null
+      type: null
+      version: null
+    model_info_output_path: !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+      _intellectual_property: null
+      _is_primitive_type: false
+      _port_name: null
+      description: null
+      early_available: null
+      mode: null
+      name: null
+      path: null
+      path_on_compute: null
+      type: null
+      version: null
+    test_data: !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+      _intellectual_property: null
+      _is_primitive_type: false
+      _port_name: null
+      description: null
+      early_available: null
+      mode: null
+      name: null
+      path: null
+      path_on_compute: null
+      type: null
+      version: null
+    train_data: !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+      _intellectual_property: null
+      _is_primitive_type: false
+      _port_name: null
+      description: null
+      early_available: null
+      mode: null
+      name: null
+      path: null
+      path_on_compute: null
+      type: null
+      version: null
+    trained_model: !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+      _intellectual_property: null
+      _is_primitive_type: false
+      _port_name: null
+      description: null
+      early_available: null
+      mode: null
+      name: null
+      path: null
+      path_on_compute: null
+      type: null
+      version: null
+    val_data: !!python/object:azure.ai.ml.entities._inputs_outputs.output.Output
+      _intellectual_property: null
+      _is_primitive_type: false
+      _port_name: null
+      description: null
+      early_available: null
+      mode: null
+      name: null
+      path: null
+      path_on_compute: null
+      type: null
+      version: null
+  _print_as_yaml: false
+  _schema: null
+  _serialize: &id506 !!python/object:msrest.serialization.Serializer
+    client_side_validation: false
+    dependencies:
+      AKS: *id012
+      AKSSchema: *id013
+      AKSSchemaProperties: *id014
+      AccountKeyDatastoreCredentials: *id015
+      AccountKeyDatastoreSecrets: *id016
+      AksComputeSecrets: *id017
+      AksComputeSecretsProperties: *id018
+      AksNetworkingConfiguration: *id019
+      AllocationState: *id020
+      AmlCompute: *id021
+      AmlComputeNodeInformation: *id022
+      AmlComputeNodesInformation: *id023
+      AmlComputeProperties: *id024
+      AmlComputeSchema: *id025
+      AmlOperation: *id026
+      AmlOperationDisplay: *id027
+      AmlOperationListResult: *id028
+      AmlToken: *id029
+      AmlUserFeature: *id030
+      ApplicationSharingPolicy: *id031
+      AssetBase: *id032
+      AssetContainer: *id033
+      AssetJobInput: *id034
+      AssetJobOutput: *id035
+      AssetReferenceBase: *id036
+      AssignedUser: *id037
+      AutoForecastHorizon: *id038
+      AutoMLJob: *id039
+      AutoMLVertical: *id040
+      AutoNCrossValidations: *id041
+      AutoPauseProperties: *id042
+      AutoRebuildSetting: *id043
+      AutoScaleProperties: *id044
+      AutoSeasonality: *id045
+      AutoTargetLags: *id046
+      AutoTargetRollingWindowSize: *id047
+      Autosave: *id048
+      AzureBlobDatastore: *id049
+      AzureDataLakeGen1Datastore: *id050
+      AzureDataLakeGen2Datastore: *id051
+      AzureFileDatastore: *id052
+      BanditPolicy: *id053
+      BatchDeployment: *id054
+      BatchDeploymentProperties: *id055
+      BatchDeploymentTrackedResourceArmPaginatedResult: *id056
+      BatchEndpoint: *id057
+      BatchEndpointDefaults: *id058
+      BatchEndpointProperties: *id059
+      BatchEndpointTrackedResourceArmPaginatedResult: *id060
+      BatchLoggingLevel: *id061
+      BatchOutputAction: *id062
+      BatchRetrySettings: *id063
+      BayesianSamplingAlgorithm: *id064
+      BillingCurrency: *id065
+      BlockedTransformers: *id066
+      BuildContext: *id067
+      Caching: *id068
+      CertificateDatastoreCredentials: *id069
+      CertificateDatastoreSecrets: *id070
+      Classification: *id071
+      ClassificationModels: *id072
+      ClassificationMultilabelPrimaryMetrics: *id073
+      ClassificationPrimaryMetrics: *id074
+      ClassificationTrainingSettings: *id075
+      ClusterPurpose: *id076
+      ClusterUpdateParameters: *id077
+      CodeConfiguration: *id078
+      CodeContainer: *id079
+      CodeContainerProperties: *id080
+      CodeContainerResourceArmPaginatedResult: *id081
+      CodeVersion: *id082
+      CodeVersionProperties: *id083
+      CodeVersionResourceArmPaginatedResult: *id084
+      ColumnTransformer: *id085
+      CommandJob: *id086
+      CommandJobLimits: *id087
+      ComponentContainer: *id088
+      ComponentContainerProperties: *id089
+      ComponentContainerResourceArmPaginatedResult: *id090
+      ComponentVersion: *id091
+      ComponentVersionProperties: *id092
+      ComponentVersionResourceArmPaginatedResult: *id093
+      Compute: *id094
+      ComputeInstance: *id095
+      ComputeInstanceApplication: *id096
+      ComputeInstanceAuthorizationType: *id097
+      ComputeInstanceConnectivityEndpoints: *id098
+      ComputeInstanceContainer: *id099
+      ComputeInstanceCreatedBy: *id100
+      ComputeInstanceDataDisk: *id101
+      ComputeInstanceDataMount: *id102
+      ComputeInstanceEnvironmentInfo: *id103
+      ComputeInstanceLastOperation: *id104
+      ComputeInstanceProperties: *id105
+      ComputeInstanceSchema: *id106
+      ComputeInstanceSshSettings: *id107
+      ComputeInstanceState: *id108
+      ComputeInstanceVersion: *id109
+      ComputePowerAction: *id110
+      ComputeResource: *id111
+      ComputeResourceSchema: *id112
+      ComputeSchedules: *id113
+      ComputeSecrets: *id114
+      ComputeStartStopSchedule: *id115
+      ComputeType: *id116
+      ConnectionAuthType: *id117
+      ConnectionCategory: *id118
+      ContainerResourceRequirements: *id119
+      ContainerResourceSettings: *id120
+      ContainerType: *id121
+      CosmosDbSettings: *id122
+      CreatedByType: *id123
+      CredentialsType: *id124
+      CronTrigger: *id125
+      CustomForecastHorizon: *id126
+      CustomModelJobInput: *id127
+      CustomModelJobOutput: *id128
+      CustomNCrossValidations: *id129
+      CustomSeasonality: *id130
+      CustomTargetLags: *id131
+      CustomTargetRollingWindowSize: *id132
+      DataContainer: *id133
+      DataContainerProperties: *id134
+      DataContainerResourceArmPaginatedResult: *id135
+      DataFactory: *id136
+      DataLakeAnalytics: *id137
+      DataLakeAnalyticsSchema: *id138
+      DataLakeAnalyticsSchemaProperties: *id139
+      DataPathAssetReference: *id140
+      DataType: *id141
+      DataVersionBase: *id142
+      DataVersionBaseProperties: *id143
+      DataVersionBaseResourceArmPaginatedResult: *id144
+      Databricks: *id145
+      DatabricksComputeSecrets: *id146
+      DatabricksComputeSecretsProperties: *id147
+      DatabricksProperties: *id148
+      DatabricksSchema: *id149
+      Datastore: *id150
+      DatastoreCredentials: *id151
+      DatastoreProperties: *id152
+      DatastoreResourceArmPaginatedResult: *id153
+      DatastoreSecrets: *id154
+      DatastoreType: *id155
+      DefaultScaleSettings: *id156
+      DeploymentLogs: *id157
+      DeploymentLogsRequest: *id158
+      DeploymentProvisioningState: *id159
+      DeploymentResourceConfiguration: *id160
+      DiagnoseRequestProperties: *id161
+      DiagnoseResponseResult: *id162
+      DiagnoseResponseResultValue: *id163
+      DiagnoseResult: *id164
+      DiagnoseResultLevel: *id165
+      DiagnoseWorkspaceParameters: *id166
+      DistributionConfiguration: *id167
+      DistributionType: *id168
+      EarlyTerminationPolicy: *id169
+      EarlyTerminationPolicyType: *id170
+      EgressPublicNetworkAccessType: *id171
+      EncryptionKeyVaultProperties: *id172
+      EncryptionProperty: *id173
+      EncryptionStatus: *id174
+      EndpointAuthKeys: *id175
+      EndpointAuthMode: *id176
+      EndpointAuthToken: *id177
+      EndpointComputeType: *id178
+      EndpointDeploymentPropertiesBase: *id179
+      EndpointPropertiesBase: *id180
+      EndpointProvisioningState: *id181
+      EndpointScheduleAction: *id182
+      EnvironmentContainer: *id183
+      EnvironmentContainerProperties: *id184
+      EnvironmentContainerResourceArmPaginatedResult: *id185
+      EnvironmentType: *id186
+      EnvironmentVersion: *id187
+      EnvironmentVersionProperties: *id188
+      EnvironmentVersionResourceArmPaginatedResult: *id189
+      ErrorAdditionalInfo: *id190
+      ErrorDetail: *id191
+      ErrorResponse: *id192
+      EstimatedVMPrice: *id193
+      EstimatedVMPrices: *id194
+      ExternalFQDNResponse: *id195
+      FQDNEndpoint: *id196
+      FQDNEndpointDetail: *id197
+      FQDNEndpoints: *id198
+      FQDNEndpointsProperties: *id199
+      FeatureLags: *id200
+      FeaturizationMode: *id201
+      FeaturizationSettings: *id202
+      FlavorData: *id203
+      ForecastHorizon: *id204
+      ForecastHorizonMode: *id205
+      Forecasting: *id206
+      ForecastingModels: *id207
+      ForecastingPrimaryMetrics: *id208
+      ForecastingSettings: *id209
+      ForecastingTrainingSettings: *id210
+      Goal: *id211
+      GridSamplingAlgorithm: *id212
+      HDInsight: *id213
+      HDInsightProperties: *id214
+      HDInsightSchema: *id215
+      IdAssetReference: *id216
+      IdentityConfiguration: *id217
+      IdentityConfigurationType: *id218
+      IdentityForCmk: *id219
+      ImageClassification: *id220
+      ImageClassificationBase: *id221
+      ImageClassificationMultilabel: *id222
+      ImageInstanceSegmentation: *id223
+      ImageLimitSettings: *id224
+      ImageModelDistributionSettings: *id225
+      ImageModelDistributionSettingsClassification: *id226
+      ImageModelDistributionSettingsObjectDetection: *id227
+      ImageModelSettings: *id228
+      ImageModelSettingsClassification: *id229
+      ImageModelSettingsObjectDetection: *id230
+      ImageObjectDetection: *id231
+      ImageObjectDetectionBase: *id232
+      ImageSweepSettings: *id233
+      ImageVertical: *id234
+      InferenceContainerProperties: *id235
+      InputDeliveryMode: *id236
+      InstanceSegmentationPrimaryMetrics: *id237
+      InstanceTypeSchema: *id238
+      InstanceTypeSchemaResources: *id239
+      JobBase: *id240
+      JobBaseProperties: *id241
+      JobBaseResourceArmPaginatedResult: *id242
+      JobInput: *id243
+      JobInputType: *id244
+      JobLimits: *id245
+      JobLimitsType: *id246
+      JobOutput: *id247
+      JobOutputType: *id248
+      JobResourceConfiguration: *id249
+      JobScheduleAction: *id250
+      JobService: *id251
+      JobStatus: *id252
+      JobType: *id253
+      KeyType: *id254
+      Kubernetes: *id255
+      KubernetesOnlineDeployment: *id256
+      KubernetesProperties: *id257
+      KubernetesSchema: *id258
+      LearningRateScheduler: *id259
+      ListAmlUserFeatureResult: *id260
+      ListNotebookKeysResult: *id261
+      ListStorageAccountKeysResult: *id262
+      ListUsagesResult: *id263
+      ListViewType: *id264
+      ListWorkspaceKeysResult: *id265
+      ListWorkspaceQuotas: *id266
+      LiteralJobInput: *id267
+      LoadBalancerType: *id268
+      LogVerbosity: *id269
+      MLFlowModelJobInput: *id270
+      MLFlowModelJobOutput: *id271
+      MLTableData: *id272
+      MLTableJobInput: *id273
+      MLTableJobOutput: *id274
+      ManagedIdentity: *id275
+      ManagedIdentityAuthTypeWorkspaceConnectionProperties: *id276
+      ManagedOnlineDeployment: *id277
+      ManagedServiceIdentity: *id278
+      ManagedServiceIdentityType: *id279
+      MedianStoppingPolicy: *id280
+      ModelContainer: *id281
+      ModelContainerProperties: *id282
+      ModelContainerResourceArmPaginatedResult: *id283
+      ModelSize: *id284
+      ModelVersion: *id285
+      ModelVersionProperties: *id286
+      ModelVersionResourceArmPaginatedResult: *id287
+      MountAction: *id288
+      MountState: *id289
+      Mpi: *id290
+      NCrossValidations: *id291
+      NCrossValidationsMode: *id292
+      Network: *id293
+      NlpVertical: *id294
+      NlpVerticalFeaturizationSettings: *id295
+      NlpVerticalLimitSettings: *id296
+      NodeState: *id297
+      NodeStateCounts: *id298
+      NoneAuthTypeWorkspaceConnectionProperties: *id299
+      NoneDatastoreCredentials: *id300
+      NotebookAccessTokenResult: *id301
+      NotebookPreparationError: *id302
+      NotebookResourceInfo: *id303
+      ObjectDetectionPrimaryMetrics: *id304
+      Objective: *id305
+      OnlineDeployment: *id306
+      OnlineDeploymentProperties: *id307
+      OnlineDeploymentTrackedResourceArmPaginatedResult: *id308
+      OnlineEndpoint: *id309
+      OnlineEndpointProperties: *id310
+      OnlineEndpointTrackedResourceArmPaginatedResult: *id311
+      OnlineRequestSettings: *id312
+      OnlineScaleSettings: *id313
+      OperatingSystemType: *id314
+      OperationName: *id315
+      OperationStatus: *id316
+      OperationTrigger: *id317
+      OrderString: *id318
+      OsType: *id319
+      OutputDeliveryMode: *id320
+      OutputPathAssetReference: *id321
+      PATAuthTypeWorkspaceConnectionProperties: *id322
+      PaginatedComputeResourcesList: *id323
+      PartialBatchDeployment: *id324
+      PartialBatchDeploymentPartialMinimalTrackedResourceWithProperties: *id325
+      PartialManagedServiceIdentity: *id326
+      PartialMinimalTrackedResource: *id327
+      PartialMinimalTrackedResourceWithIdentity: *id328
+      PartialMinimalTrackedResourceWithSku: *id329
+      PartialSku: *id330
+      Password: *id331
+      PersonalComputeInstanceSettings: *id332
+      PipelineJob: *id333
+      PrivateEndpoint: *id334
+      PrivateEndpointConnection: *id335
+      PrivateEndpointConnectionListResult: *id336
+      PrivateEndpointConnectionProvisioningState: *id337
+      PrivateEndpointServiceConnectionStatus: *id338
+      PrivateLinkResource: *id339
+      PrivateLinkResourceListResult: *id340
+      PrivateLinkServiceConnectionState: *id341
+      ProbeSettings: *id342
+      ProvisioningState: *id343
+      ProvisioningStatus: *id344
+      PublicNetworkAccess: *id345
+      PublicNetworkAccessType: *id346
+      PyTorch: *id347
+      QuotaBaseProperties: *id348
+      QuotaUnit: *id349
+      QuotaUpdateParameters: *id350
+      RandomSamplingAlgorithm: *id351
+      RandomSamplingAlgorithmRule: *id352
+      RecurrenceFrequency: *id353
+      RecurrenceSchedule: *id354
+      RecurrenceTrigger: *id355
+      ReferenceType: *id356
+      RegenerateEndpointKeysRequest: *id357
+      RegistryListCredentialsResult: *id358
+      Regression: *id359
+      RegressionModels: *id360
+      RegressionPrimaryMetrics: *id361
+      RegressionTrainingSettings: *id362
+      RemoteLoginPortPublicAccess: *id363
+      Resource: *id364
+      ResourceBase: *id365
+      ResourceConfiguration: *id366
+      ResourceId: *id367
+      ResourceName: *id368
+      ResourceQuota: *id369
+      Route: *id370
+      SASAuthTypeWorkspaceConnectionProperties: *id371
+      SamplingAlgorithm: *id372
+      SamplingAlgorithmType: *id373
+      SasDatastoreCredentials: *id374
+      SasDatastoreSecrets: *id375
+      ScaleSettings: *id376
+      ScaleSettingsInformation: *id377
+      ScaleType: *id378
+      Schedule: *id379
+      ScheduleActionBase: *id380
+      ScheduleActionType: *id381
+      ScheduleBase: *id382
+      ScheduleListViewType: *id383
+      ScheduleProperties: *id384
+      ScheduleProvisioningState: *id385
+      ScheduleProvisioningStatus: *id386
+      ScheduleResourceArmPaginatedResult: *id387
+      ScheduleStatus: *id388
+      ScriptReference: *id389
+      ScriptsToExecute: *id390
+      Seasonality: *id391
+      SeasonalityMode: *id392
+      SecretsType: *id393
+      ServiceDataAccessAuthIdentity: *id394
+      ServiceManagedResourcesSettings: *id395
+      ServicePrincipalDatastoreCredentials: *id396
+      ServicePrincipalDatastoreSecrets: *id397
+      SetupScripts: *id398
+      SharedPrivateLinkResource: *id399
+      ShortSeriesHandlingConfiguration: *id400
+      Sku: *id401
+      SkuCapacity: *id402
+      SkuResource: *id403
+      SkuResourceArmPaginatedResult: *id404
+      SkuScaleType: *id405
+      SkuSetting: *id406
+      SkuTier: *id407
+      SourceType: *id408
+      SshPublicAccess: *id409
+      SslConfigStatus: *id410
+      SslConfiguration: *id411
+      StackEnsembleSettings: *id412
+      StackMetaLearnerType: *id413
+      Status: *id414
+      StochasticOptimizer: *id415
+      StorageAccountType: *id416
+      SweepJob: *id417
+      SweepJobLimits: *id418
+      SynapseSpark: *id419
+      SynapseSparkProperties: *id420
+      SystemData: *id421
+      SystemService: *id422
+      TableVertical: *id423
+      TableVerticalFeaturizationSettings: *id424
+      TableVerticalLimitSettings: *id425
+      TargetAggregationFunction: *id426
+      TargetLags: *id427
+      TargetLagsMode: *id428
+      TargetRollingWindowSize: *id429
+      TargetRollingWindowSizeMode: *id430
+      TargetUtilizationScaleSettings: *id431
+      TaskType: *id432
+      TensorFlow: *id433
+      TextClassification: *id434
+      TextClassificationMultilabel: *id435
+      TextNer: *id436
+      TrackedResource: *id437
+      TrainingSettings: *id438
+      TrialComponent: *id439
+      TriggerBase: *id440
+      TriggerType: *id441
+      TritonModelJobInput: *id442
+      TritonModelJobOutput: *id443
+      TruncationSelectionPolicy: *id444
+      UnderlyingResourceAction: *id445
+      UnitOfMeasure: *id446
+      UpdateWorkspaceQuotas: *id447
+      UpdateWorkspaceQuotasResult: *id448
+      UriFileDataVersion: *id449
+      UriFileJobInput: *id450
+      UriFileJobOutput: *id451
+      UriFolderDataVersion: *id452
+      UriFolderJobInput: *id453
+      UriFolderJobOutput: *id454
+      Usage: *id455
+      UsageName: *id456
+      UsageUnit: *id457
+      UseStl: *id458
+      UserAccountCredentials: *id459
+      UserAssignedIdentity: *id460
+      UserIdentity: *id461
+      UsernamePasswordAuthTypeWorkspaceConnectionProperties: *id462
+      VMPriceOSType: *id463
+      VMTier: *id464
+      ValidationMetricType: *id465
+      ValueFormat: *id466
+      VirtualMachine: *id467
+      VirtualMachineImage: *id468
+      VirtualMachineSchema: *id469
+      VirtualMachineSchemaProperties: *id470
+      VirtualMachineSecrets: *id471
+      VirtualMachineSecretsSchema: *id472
+      VirtualMachineSize: *id473
+      VirtualMachineSizeListResult: *id474
+      VirtualMachineSshCredentials: *id475
+      VmPriority: *id476
+      WeekDay: *id477
+      Workspace: *id478
+      WorkspaceConnectionManagedIdentity: *id479
+      WorkspaceConnectionPersonalAccessToken: *id480
+      WorkspaceConnectionPropertiesV2: *id481
+      WorkspaceConnectionPropertiesV2BasicResource: *id482
+      WorkspaceConnectionPropertiesV2BasicResourceArmPaginatedResult: *id483
+      WorkspaceConnectionSharedAccessSignature: *id484
+      WorkspaceConnectionUsernamePassword: *id485
+      WorkspaceListResult: *id486
+      WorkspaceUpdateParameters: *id487
+    key_transformer: *id488
+    serialize_type:
+      '[]': !!python/object/apply:builtins.getattr
+      - *id506
+      - serialize_iter
+      base64: *id490
+      bytearray: *id491
+      date: *id492
+      decimal: *id493
+      duration: *id494
+      iso-8601: *id495
+      long: *id496
+      object: !!python/object/apply:builtins.getattr
+      - *id506
+      - serialize_object
+      rfc-1123: *id497
+      time: *id498
+      unix-time: *id499
+      '{}': !!python/object/apply:builtins.getattr
+      - *id506
+      - serialize_dict
+  _source: REMOTE.WORKSPACE.JOB
+  _source_job_id: null
+  _type: pipeline
+  _version: '1'
+  _yaml_str: null
+  auto_delete_setting: null
+  description: Training Pipeline to train a model that predicts taxi fare price
+  latest_version: null
+  name: azureml_anonymous
+  properties: {}
+  tags: {}
+compute: null
+description: Training Pipeline to train a model that predicts taxi fare price
+display_name: prod_taxi_fare_run_43
+experiment_name: prod_taxi_fare_train_main
+identity: null
+name: lemon_rhythm_sgmmh4rf1b
+properties:
+  azureml.DatasetAccessMode: Asset
+  azureml.DevPlatv2: 'true'
+  azureml.continue_on_failed_optional_input: 'True'
+  azureml.continue_on_step_failure: 'False'
+  azureml.defaultComputeName: cpu-cluster
+  azureml.defaultDataStoreName: workspaceblobstore
+  azureml.enforceRerun: 'False'
+  azureml.git.dirty: 'True'
+  azureml.parameters: '{"enable_monitoring":"false","table_name":"taximonitoring"}'
+  azureml.pipelineComponent: pipelinerun
+  azureml.pipelines.stages: '{"Initialization":null,"Execution":{"StartTime":"2024-07-24T08:23:39.38151+00:00","EndTime":"2024-07-24T08:30:35.7693667+00:00","Status":"Finished"}}'
+  azureml.runsource: azureml.PipelineRun
+  mlflow.source.git.commit: 8eed3956e71574c81ad85170cb0d247465448d11
+  mlflow.source.git.repoURL: https://calvinp@dev.azure.com/calvinp/MLOps-v2/_git/taxi-fare-regression-v2
+  runSource: MFE
+  runType: HTTP
+services:
+  Studio: !!python/object:azure.ai.ml.entities._job.job_service.JobService
+    endpoint: https://ml.azure.com/runs/lemon_rhythm_sgmmh4rf1b?wsid=/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/resourcegroups/rg-pnxmlopsv2-0002prod/workspaces/mlw-pnxmlopsv2-0002prod&tid=16e68a07-cd9e-4f01-b178-6767c6ca55ab
+    nodes: null
+    port: null
+    properties: null
+    status: null
+    type: Studio
+  Tracking: !!python/object:azure.ai.ml.entities._job.job_service.JobService
+    endpoint: azureml://eastus.api.azureml.ms/mlflow/v1.0/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/resourceGroups/rg-pnxmlopsv2-0002prod/providers/Microsoft.MachineLearningServices/workspaces/mlw-pnxmlopsv2-0002prod?
+    nodes: null
+    port: null
+    properties: null
+    status: null
+    type: Tracking
+tags: {}

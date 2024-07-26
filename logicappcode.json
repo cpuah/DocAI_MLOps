@@ -1,0 +1,287 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Analyze_Document_for_Prebuilt_or_Custom_models_(v3.x_API)": {
+                "inputs": {
+                    "headers": {
+                        "inputFileUrl": "@body('Parse_JSON')?['data']?['url']"
+                    },
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['formrecognizer']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/documentModels/@{encodeURIComponent('prebuilt-invoice')}:analyze",
+                    "queries": {
+                        "api-version": "2023-07-31"
+                    }
+                },
+                "runAfter": {
+                    "Parse_JSON": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            },
+            "For_Each": {
+                "actions": {
+                    "Add_a_row_into_Invoice_table": {
+                        "inputs": {
+                            "body": {
+                                "CustomerName": "@{items('For_Each')?['fields']?['CustomerName']?['content']}",
+                                "DocConfidence": "@{string(items('For_Each')?['confidence'])}",
+                                "InvoiceDate": "@{items('For_Each')?['fields']?['InvoiceDate']?['content']}",
+                                "InvoiceTotal": "@{items('For_Each')?['fields']?['InvoiceTotal']?['content']}",
+                                "VendorName": "@{items('For_Each')?['fields']?['VendorName']?['content']}"
+                            },
+                            "host": {
+                                "connection": {
+                                    "name": "@parameters('$connections')['excelonlinebusiness']['connectionId']"
+                                }
+                            },
+                            "method": "post",
+                            "path": "/codeless/v1.2/drives/@{encodeURIComponent('b!RcPeURRxAkqEAiESjwX8SwwSIg7F9E1LjiaP0N0hXUm0B6sYUkDKTo-mfZgSyniD')}/items/@{encodeURIComponent(encodeURIComponent('01HYHLP2CKO4AJK5FS2RE27DXS3CD7CAVR'))}/workbook/tables/@{encodeURIComponent('{770E8545-486A-4DA9-BDC9-025032840245}')}/rows",
+                            "queries": {
+                                "source": "me"
+                            }
+                        },
+                        "metadata": {
+                            "01HYHLP2CKO4AJK5FS2RE27DXS3CD7CAVR": "/Desktop/FileFolder/Invoice.xlsx"
+                        },
+                        "runAfter": {
+                            "Send_an_email_(V2)": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "ApiConnection"
+                    },
+                    "Compose": {
+                        "inputs": "@items('For_Each')?['fields']",
+                        "runAfter": {
+                            "Add_a_row_into_Invoice_table": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "Compose"
+                    },
+                    "For_each_2": {
+                        "actions": {
+                            "Add_a_row_into_a_table_2": {
+                                "inputs": {
+                                    "body": {
+                                        "Amt": "@{outputs('Compose_3')?['Amount']?['content']}",
+                                        "InvoiceDate": "@body('Add_a_row_into_Invoice_table')?['InvoiceDate']",
+                                        "Product": "@{outputs('Compose_3')?['ProductCode']?['content']}",
+                                        "Qty": "@{outputs('Compose_3')?['Quantity']?['content']}",
+                                        "UnitPrice": "@{outputs('Compose_3')?['UnitPrice']?['content']}",
+                                        "VendorName": "@body('Add_a_row_into_Invoice_table')?['VendorName']"
+                                    },
+                                    "host": {
+                                        "connection": {
+                                            "name": "@parameters('$connections')['excelonlinebusiness']['connectionId']"
+                                        }
+                                    },
+                                    "method": "post",
+                                    "path": "/codeless/v1.2/drives/@{encodeURIComponent('b!RcPeURRxAkqEAiESjwX8SwwSIg7F9E1LjiaP0N0hXUm0B6sYUkDKTo-mfZgSyniD')}/items/@{encodeURIComponent(encodeURIComponent('01HYHLP2CKO4AJK5FS2RE27DXS3CD7CAVR'))}/workbook/tables/@{encodeURIComponent('{05F36EF7-7B0F-4396-BFFB-FEBAD7AABE14}')}/rows",
+                                    "queries": {
+                                        "source": "me"
+                                    }
+                                },
+                                "metadata": {
+                                    "01HYHLP2CKO4AJK5FS2RE27DXS3CD7CAVR": "/Desktop/FileFolder/Invoice.xlsx"
+                                },
+                                "runAfter": {
+                                    "Compose_3": [
+                                        "Succeeded"
+                                    ]
+                                },
+                                "type": "ApiConnection"
+                            },
+                            "Compose_3": {
+                                "inputs": "@items('For_each_2')?['valueObject']",
+                                "runAfter": {},
+                                "type": "Compose"
+                            }
+                        },
+                        "foreach": "@outputs('Compose')?['Items']?['valueArray']",
+                        "runAfter": {
+                            "Compose": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "Foreach"
+                    },
+                    "Send_an_email_(V2)": {
+                        "inputs": {
+                            "body": {
+                                "Body": "<p>CustomerName: @{items('For_Each')?['fields']?['CustomerName']?['content']}<br>\nInvoice Total: @{items('For_Each')?['fields']?['InvoiceTotal']?['content']}<br>\nInvoice Due: @{items('For_Each')?['fields']?['InvoiceDate']?['content']}<br>\n<br>\nDocument Confidence: @{items('For_Each')?['confidence']}</p>",
+                                "Importance": "Normal",
+                                "Subject": "Invoice from: @{items('For_Each')?['fields']?['VendorName']?['content']}",
+                                "To": "calvinp@pernix.com.au"
+                            },
+                            "host": {
+                                "connection": {
+                                    "name": "@parameters('$connections')['office365']['connectionId']"
+                                }
+                            },
+                            "method": "post",
+                            "path": "/v2/Mail"
+                        },
+                        "runAfter": {},
+                        "type": "ApiConnection"
+                    }
+                },
+                "foreach": "@body('Analyze_Document_for_Prebuilt_or_Custom_models_(v3.x_API)')?['analyzeResult']?['documents']",
+                "runAfter": {
+                    "Analyze_Document_for_Prebuilt_or_Custom_models_(v3.x_API)": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Foreach"
+            },
+            "Parse_JSON": {
+                "inputs": {
+                    "content": "@triggerBody()",
+                    "schema": {
+                        "properties": {
+                            "data": {
+                                "properties": {
+                                    "api": {
+                                        "type": "string"
+                                    },
+                                    "blobType": {
+                                        "type": "string"
+                                    },
+                                    "clientRequestId": {
+                                        "type": "string"
+                                    },
+                                    "contentLength": {
+                                        "type": "integer"
+                                    },
+                                    "contentType": {
+                                        "type": "string"
+                                    },
+                                    "eTag": {
+                                        "type": "string"
+                                    },
+                                    "requestId": {
+                                        "type": "string"
+                                    },
+                                    "sequencer": {
+                                        "type": "string"
+                                    },
+                                    "storageDiagnostics": {
+                                        "properties": {
+                                            "batchId": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "dataVersion": {
+                                "type": "string"
+                            },
+                            "eventTime": {
+                                "type": "string"
+                            },
+                            "eventType": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "metadataVersion": {
+                                "type": "string"
+                            },
+                            "subject": {
+                                "type": "string"
+                            },
+                            "topic": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "runAfter": {},
+                "type": "ParseJson"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "When_a_resource_event_occurs": {
+                "inputs": {
+                    "body": {
+                        "properties": {
+                            "destination": {
+                                "endpointType": "webhook",
+                                "properties": {
+                                    "endpointUrl": "@{listCallbackUrl()}"
+                                }
+                            },
+                            "filter": {
+                                "includedEventTypes": [
+                                    "Microsoft.Storage.BlobCreated"
+                                ],
+                                "subjectEndsWith": ".pdf"
+                            },
+                            "topic": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/resourceGroups/rg-docintelmlops/providers/Microsoft.Storage/storageAccounts/sty7us5axonhst4"
+                        }
+                    },
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['azureeventgrid']['connectionId']"
+                        }
+                    },
+                    "path": "/subscriptions/@{encodeURIComponent('d1667ff4-706c-4a59-b58e-65fc55504876')}/providers/@{encodeURIComponent('Microsoft.Storage.StorageAccounts')}/resource/eventSubscriptions",
+                    "queries": {
+                        "x-ms-api-version": "2017-06-15-preview"
+                    }
+                },
+                "splitOn": "@triggerBody()",
+                "type": "ApiConnectionWebhook"
+            }
+        }
+    },
+    "parameters": {
+        "$connections": {
+            "value": {
+                "azureeventgrid": {
+                    "connectionId": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/resourceGroups/rg-docintelmlops/providers/Microsoft.Web/connections/azureeventgrid",
+                    "connectionName": "azureeventgrid",
+                    "id": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/providers/Microsoft.Web/locations/australiaeast/managedApis/azureeventgrid"
+                },
+                "excelonlinebusiness": {
+                    "connectionId": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/resourceGroups/rg-docintelmlops/providers/Microsoft.Web/connections/excelonlinebusiness",
+                    "connectionName": "excelonlinebusiness",
+                    "id": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/providers/Microsoft.Web/locations/australiaeast/managedApis/excelonlinebusiness"
+                },
+                "formrecognizer": {
+                    "connectionId": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/resourceGroups/rg-docintelmlops/providers/Microsoft.Web/connections/formrecognizer",
+                    "connectionName": "formrecognizer",
+                    "id": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/providers/Microsoft.Web/locations/australiaeast/managedApis/formrecognizer"
+                },
+                "office365": {
+                    "connectionId": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/resourceGroups/rg-docintelmlops/providers/Microsoft.Web/connections/office365",
+                    "connectionName": "office365",
+                    "id": "/subscriptions/d1667ff4-706c-4a59-b58e-65fc55504876/providers/Microsoft.Web/locations/australiaeast/managedApis/office365"
+                }
+            }
+        }
+    }
+}
