@@ -1,7 +1,7 @@
 {
     "status": "succeeded",
-    "createdDateTime": "2024-07-18T04:42:14Z",
-    "lastUpdatedDateTime": "2024-07-18T04:42:14Z",
+    "createdDateTime": "2024-07-29T06:28:04Z",
+    "lastUpdatedDateTime": "2024-07-29T06:28:04Z",
     "analyzeResult": {
         "apiVersion": "2023-07-31",
         "modelId": "invoices-1.0.0",
@@ -2788,27 +2788,67 @@
                         ],
                         "confidence": 0.991
                     },
-                    "Distributor Signature": {
-                        "valueType": "signature",
-                        "value": "signed",
-                        "content": null,
+                    "Total Price": {
+                        "valueType": "string",
+                        "value": "64.38",
+                        "content": "64.38",
                         "boundingRegions": [
                             {
                                 "pageNumber": 1,
                                 "polygon": [
-                                    2.51,
-                                    7.0,
-                                    4.695,
-                                    7.0,
-                                    4.695,
-                                    7.7,
-                                    2.51,
-                                    7.7
+                                    6.445,
+                                    6.205,
+                                    6.84,
+                                    6.205,
+                                    6.84,
+                                    6.35,
+                                    6.445,
+                                    6.35
                                 ]
                             }
                         ],
+                        "spans": [
+                            {
+                                "offset": 331,
+                                "length": 5
+                            }
+                        ],
+                        "confidence": 0.728
+                    },
+                    "Distributor Signature Date": {
+                        "valueType": "string",
+                        "value": "2/27/2024",
+                        "content": "2/27/2024",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    6.265,
+                                    7.28,
+                                    6.93,
+                                    7.28,
+                                    6.93,
+                                    7.425,
+                                    6.265,
+                                    7.425
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 366,
+                                "length": 9
+                            }
+                        ],
+                        "confidence": 0.994
+                    },
+                    "Customer Signature Date": {
+                        "valueType": "string",
+                        "value": null,
+                        "content": null,
+                        "boundingRegions": [],
                         "spans": [],
-                        "confidence": 0.995
+                        "confidence": 0.982
                     },
                     "Total Quantity": {
                         "valueType": "string",
@@ -2836,55 +2876,6 @@
                             }
                         ],
                         "confidence": 0.958
-                    },
-                    "Customer Signature": {
-                        "valueType": "signature",
-                        "value": "unsigned",
-                        "content": null,
-                        "boundingRegions": [
-                            {
-                                "pageNumber": 1,
-                                "polygon": [
-                                    2.3,
-                                    7.5,
-                                    4.02,
-                                    7.5,
-                                    4.02,
-                                    8.475,
-                                    2.3,
-                                    8.475
-                                ]
-                            }
-                        ],
-                        "spans": [],
-                        "confidence": 0.995
-                    },
-                    "Total Price": {
-                        "valueType": "string",
-                        "value": "64.38",
-                        "content": "64.38",
-                        "boundingRegions": [
-                            {
-                                "pageNumber": 1,
-                                "polygon": [
-                                    6.445,
-                                    6.205,
-                                    6.84,
-                                    6.205,
-                                    6.84,
-                                    6.35,
-                                    6.445,
-                                    6.35
-                                ]
-                            }
-                        ],
-                        "spans": [
-                            {
-                                "offset": 331,
-                                "length": 5
-                            }
-                        ],
-                        "confidence": 0.728
                     },
                     "Issued Date": {
                         "valueType": "string",
@@ -2940,6 +2931,50 @@
                         ],
                         "confidence": 0.921
                     },
+                    "Customer Signature": {
+                        "valueType": "signature",
+                        "value": "unsigned",
+                        "content": null,
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    2.3,
+                                    7.5,
+                                    4.02,
+                                    7.5,
+                                    4.02,
+                                    8.475,
+                                    2.3,
+                                    8.475
+                                ]
+                            }
+                        ],
+                        "spans": [],
+                        "confidence": 0.995
+                    },
+                    "Distributor Signature": {
+                        "valueType": "signature",
+                        "value": "signed",
+                        "content": null,
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    2.51,
+                                    7.0,
+                                    4.695,
+                                    7.0,
+                                    4.695,
+                                    7.7,
+                                    2.51,
+                                    7.7
+                                ]
+                            }
+                        ],
+                        "spans": [],
+                        "confidence": 0.995
+                    },
                     "Paid Stamp": {
                         "valueType": "signature",
                         "value": "unsigned",
@@ -2961,41 +2996,6 @@
                         ],
                         "spans": [],
                         "confidence": 0.995
-                    },
-                    "Customer Signature Date": {
-                        "valueType": "string",
-                        "value": null,
-                        "content": null,
-                        "boundingRegions": [],
-                        "spans": [],
-                        "confidence": 0.982
-                    },
-                    "Distributor Signature Date": {
-                        "valueType": "string",
-                        "value": "2/27/2024",
-                        "content": "2/27/2024",
-                        "boundingRegions": [
-                            {
-                                "pageNumber": 1,
-                                "polygon": [
-                                    6.265,
-                                    7.28,
-                                    6.93,
-                                    7.28,
-                                    6.93,
-                                    7.425,
-                                    6.265,
-                                    7.425
-                                ]
-                            }
-                        ],
-                        "spans": [
-                            {
-                                "offset": 366,
-                                "length": 9
-                            }
-                        ],
-                        "confidence": 0.994
                     },
                     "Items": {
                         "valueType": "list",
